@@ -1,0 +1,23 @@
+{
+  "name": "weatherornot",
+  "version": "1.0.0",
+  "description": "A privacy-respecting weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunar-s/WeatherOrNot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lunar-s/WeatherOrNot/issues"
+  },
+  "homepage": "https://github.com/lunar-s/WeatherOrNot#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}
