@@ -4,7 +4,12 @@ const cityFinder = require("../controller/cityFinder");
 const parseString = require("xml2js").parseString;
 
 const temperatureExtract = (req, res) => {
-  let cityToFind = req.params.city;
+  let cityToFind = req.query.city
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(" ", "")
+    .replace(".", "");
   const city = cityFinder(cityToFind);
   if (city) {
     const province = city.properties["Province Codes"];
@@ -31,10 +36,8 @@ const temperatureExtract = (req, res) => {
     });
     // console.log(result.siteData.currentConditions[0].temperature[0]["_"]);
   } else {
-    res.render("city", {
-      city: "None found!",
-      province: "None found!",
-      temperature: "None found!",
+    res.render("404", {
+      city: req.query.city,
     });
   }
 };
