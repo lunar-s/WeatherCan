@@ -33,11 +33,11 @@ const temperatureExtract = (req, res) => {
           if (err) throw err;
           const temperature =
             result.siteData.currentConditions[0].temperature[0]["_"];
-          if (unitType === "on") {
+          if (unitType === "fahrenheit") {
             res.render("city", {
               city: cityName,
               province: province,
-              temperature: `${unitConvert(temperature)} F`,
+              temperature: `${unitConvert(temperature)} °F`,
             });
           } else {
             res.render("city", {
