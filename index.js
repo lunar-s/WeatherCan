@@ -12,7 +12,7 @@ app.use(ejsLayouts);
 app.set("view engine", "ejs");
 
 // Routes start here
-app.get("/:city", temperatureExtract);
+app.get("/forecast", temperatureExtract);
 
 app.listen(8080, function () {
   console.log(
