@@ -5,12 +5,12 @@ checkBox.addEventListener("change", (e) =>
     {
     if (checkBox.checked) {
         tempString = temp.innerHTML;
-        tempValueC = Number(tempString.slice(13, 17));
+        tempValueC = parseFloat(tempString.slice(13, 18));
         tempValueF = tempValueC * 1.8 + 32 
         temp.innerHTML = `Temperature: ${tempValueF.toFixed(1)} °F`;
     } else {
         tempString = temp.innerHTML;
-        tempValueF = Number(tempString.slice(13, 17));
+        tempValueF = parseFloat(tempString.slice(13, 18));
         tempValueC = (tempValueF - 32) * (5/9) 
         temp.innerHTML = `Temperature: ${tempValueC.toFixed(1)} °C`;
     }
