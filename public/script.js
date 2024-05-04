@@ -5,10 +5,13 @@ checkBox.addEventListener("change", (e) =>
     {
     if (checkBox.checked) {
         tempString = temp.innerHTML;
-        tempValueC = Number(tempString.slice(13, 17))
-        tempValueF = tempValueC * 1.8 + 32 //should we round to 1 decimal place?
-        temp.innerHTML = `Temperature: ${tempValueF} °F`
+        tempValueC = Number(tempString.slice(13, 17));
+        tempValueF = tempValueC * 1.8 + 32 
+        temp.innerHTML = `Temperature: ${tempValueF.toFixed(1)} °F`;
     } else {
-        temp.innerHTML = `Temperature: ${tempValueC} °C`
+        tempString = temp.innerHTML;
+        tempValueF = Number(tempString.slice(13, 17));
+        tempValueC = (tempValueF - 32) * (5/9) 
+        temp.innerHTML = `Temperature: ${tempValueC.toFixed(1)} °C`;
     }
 })
