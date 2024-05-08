@@ -1,36 +1,26 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>WeatherOrNot</title>
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="cloud.png" />
-  </head>
 
-  <body>
-    <h1>WeatherOrNot</h1>
-    <form action="/forecast" method="get">
-      <div class="form-check form-switch">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckDefault"
-          name="unit"
-          value="fahrenheit"
-        />
-        <label class="form-check-label" for="flexSwitchCheckDefault"
-          >Celsius / Fahrenheit</label
-        >
-      </div>
-      <input
-        type="text"
-        name="city"
-        placeholder="Enter a Canadian city..."
-        required
-      />
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>WeatherOrNot</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="styles2.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="cloud.png" />
+</head>
+
+<body>
+  <h1>WeatherOrNot</h1>
+  <form action="/forecast" method="get">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="unit"
+        value="fahrenheit" />
+      <label class="form-check-label" for="flexSwitchCheckDefault">Celsius / Fahrenheit</label>
+    </div>
+    <input type="text" name="city" placeholder="Enter a Canadian city..." required />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+</body>
+
 </html>
