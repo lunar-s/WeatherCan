@@ -2,7 +2,8 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/">WeatherOrNot</a>
     <form class="d-flex" role="search" action="/forecast" method="get">
-      <% if(temperature.includes("F")) { %>
+      <% if(temperature == null) { %> <% } else if (temperature.includes("F")) {
+      %>
       <div class="form-check form-switch">
         <input
           class="form-check-input"
@@ -31,7 +32,7 @@
           >Celsius / Fahrenheit</label
         >
       </div>
-      <% } %>
+      <% } else{ %> <% } %>
       <input
         class="form-control me-2"
         type="search"

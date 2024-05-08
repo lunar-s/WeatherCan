@@ -57,6 +57,9 @@ const temperatureExtract = (req, res) => {
   } else {
     res.render("404", {
       city: req.query.city,
+      province: null,
+      temperature: null,
+      currentConditions: null,
     });
   }
 };
