@@ -2,6 +2,22 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/">WeatherOrNot</a>
     <form class="d-flex" role="search" action="/forecast" method="get">
+      <% if(temperature.includes("F")) { %>
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+          name="unit"
+          value="fahrenheit"
+          checked
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >Celsius / Fahrenheit</label
+        >
+      </div>
+      <% } else if (temperature.includes("C")) { %>
       <div class="form-check form-switch">
         <input
           class="form-check-input"
@@ -15,6 +31,7 @@
           >Celsius / Fahrenheit</label
         >
       </div>
+      <% } %>
       <input
         class="form-control me-2"
         type="search"
