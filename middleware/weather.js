@@ -46,7 +46,7 @@ const temperatureExtract = (req, res) => {
             res.render("city", {
               city: cityName,
               province: province,
-              temperature: `${temperature.toFixed(1)} °C`,
+              temperature: `${temperature} °C`,
               currentConditions: currentConditions,
             });
           }
