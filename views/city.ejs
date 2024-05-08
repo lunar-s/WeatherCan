@@ -1,7 +1,65 @@
 <div class="container">
-  <p>City: <%= city %></p>
-  <p></p>
-  <p>Province: <%= province %></p>
-  <p></p>
-  <p>Temperature: <%= temperature %></p>
+
+  <!-- left side css -->
+  <div class="leftside">
+
+    <div class="overview">
+    <!-- THIS IS FOR TITLE, TIME, AND CURRENT FORECAST -->
+    
+      <div class="title">
+      <!-- THIS IS FOR TITLE, TIME -->
+
+        <h2> <%= city %>, <%= province %> </h2>
+
+        <hr>
+        
+        <p>time</p>
+
+        <!-- add line -->
+
+        <!-- add time -->
+
+      </div>
+
+      <div class="forecast">
+      <!-- THIS IS FOR CURRENT FORECAST -->
+
+        <!-- THROW IN PIC OF FORECAST -->
+        <p>insert icon</p>
+        <p><%= temperature %></p>
+
+      </div>
+
+    </div>
+
+    <div class="future">
+    <!-- THIS IS FOR FUTURE FORECAST (THAT BOTTOM SIDE) -->
+
+      <!-- yeah throw it in here -->
+      <p>mon (icon)</p>
+      <p>tues (icon)</p>
+      <p>wed (icon)</p>
+
+    </div>
+
+  <!-- end of left side css -->
+  </div>
+
+  <!-- right side css -->
+  <!-- this side will only occasionally be up -->
+
+  <div class="rightside">
+
+    <div class="alert">
+      <h2>ALERT</h2>
+    </div>
+
+    <div class="icons">
+      <p>HI!</p>
+      <p>HI!</p>
+      <p>HI!</p>
+    </div>
+
+  </div>
+
 </div>
