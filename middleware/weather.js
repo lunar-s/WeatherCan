@@ -5,7 +5,7 @@ const parseString = require("xml2js").parseString;
 
 const unitConvert = (temperature) => {
   let temperatureF = temperature * 1.8 + 32;
-  return temperatureF;
+  return temperatureF.toFixed(1);
 };
 
 const temperatureExtract = (req, res) => {
@@ -33,17 +33,21 @@ const temperatureExtract = (req, res) => {
           if (err) throw err;
           const temperature =
             result.siteData.currentConditions[0].temperature[0]["_"];
+          const currentConditions =
+            result.siteData.currentConditions[0].condition;
           if (unitType === "fahrenheit") {
             res.render("city", {
               city: cityName,
               province: province,
               temperature: `${unitConvert(temperature)} °F`,
+              currentConditions: currentConditions,
             });
           } else {
             res.render("city", {
               city: cityName,
               province: province,
-              temperature: `${temperature} °C`,
+              temperature: `${temperature.toFixed(1)} °C`,
+              currentConditions: currentConditions,
             });
           }
         });
