@@ -43,6 +43,7 @@ const temperatureExtract = (req, res) => {
     const unitType = req.query.unit;
     const url = `https://dd.weather.gc.ca/citypage_weather/xml/${province}/${cityCode}_e.xml`;
 
+    // COMMENT BELOW FOR TESTING PURPOSES
     https.get(url, (xml) => {
       let data = "";
       xml.on("data", (chunk) => {
@@ -51,6 +52,9 @@ const temperatureExtract = (req, res) => {
       xml.on("end", () => {
         parseString(data, (err, result) => {
           if (err) throw err;
+          // STOP COMMENT HERE
+          // UNCOMMENT LINE BELOW FOR TESTING
+          // const result = require("../controller/test_data.json");
           const forecast = forecastData(result);
 
           if (unitType === "fahrenheit") {
@@ -70,9 +74,11 @@ const temperatureExtract = (req, res) => {
               iconCondition: iconCondition(forecast.currentConditions),
             });
           }
+          // COMMENT BELOW FOR TESTING PURPOSES
         });
       });
     });
+    // STOP COMMENT HERE
   } else {
     res.render("404", {
       city: req.query.city,
