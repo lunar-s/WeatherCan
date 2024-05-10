@@ -23,7 +23,7 @@ const iconCondition = (currentConditions) => {
   } else if (weatherConditions["clear"].includes(currentConditions[0])) {
     return "weather-icons/night-clear-icon.png";
   } else {
-    return "nothing";
+    return "weather-icons/question-mark-icon.npg";
   }
 };
 
