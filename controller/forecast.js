@@ -14,20 +14,26 @@ const forecastData = (result) => {
     tomorrowDay: result.siteData.forecastGroup[0].forecast[1].period[0]["_"],
     tomorrowConditions:
       result.siteData.forecastGroup[0].forecast[1].textSummary[0],
+    tomorrowNightConditions:
+      result.siteData.forecastGroup[0].forecast[2].textSummary[0],
     overmorrowDay: result.siteData.forecastGroup[0].forecast[3].period[0]["_"],
     overmorrowConditions:
       result.siteData.forecastGroup[0].forecast[3].textSummary[0],
+    overmorrowNightConditions:
+      result.siteData.forecastGroup[0].forecast[4].textSummary[0],
   };
 };
 
-// console.log(dateTime);
-// console.log("Tonight: " + tonightConditions);
+// UNCOMMENT BELOW FOR TESTING
+// const result = require("./test_data.json");
+// const forecast = forecastData(result);
+// console.log(forecast.dateTime);
+// console.log("Tonight: " + forecast.tonightConditions);
 // console.log();
-// console.log(`${tomorrowDay}: ${tomorrowConditions}`);
-// console.log(
-//   "Night: " + result.siteData.forecastGroup[0].forecast[2].textSummary[0]
-// );
+// console.log(`${forecast.tomorrowDay}: ${forecast.tomorrowConditions}`);
+// console.log("Night: " + forecast.tomorrowNightConditions);
 // console.log();
-// console.log(`${overmorrowDay}: ${overmorrowConditions}`);
+// console.log(`${forecast.overmorrowDay}: ${forecast.overmorrowConditions}`);
+// console.log("Night: " + forecast.overmorrowNightConditions);
 
 module.exports = forecastData;
