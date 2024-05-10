@@ -22,7 +22,7 @@
 
     }
 
-    .container {
+    .bothside {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -74,7 +74,7 @@ hr {
 
 /* fortnite */
 
-.container {
+.bothside {
     margin: 0px;
     padding: 0px;
     height: 90%;
