@@ -2,10 +2,29 @@ const fs = require("fs");
 const https = require("https");
 const cityFinder = require("../controller/cityFinder");
 const parseString = require("xml2js").parseString;
+const weatherConditions = require("./conditions");
 
 const unitConvert = (temperature) => {
   let temperatureF = temperature * 1.8 + 32;
   return temperatureF.toFixed(1);
+};
+
+const iconCondition = (currentConditions) => {
+  if (weatherConditions["sunny"].includes(currentConditions[0])) {
+    return "weather-icons/sunny-icon.png";
+  } else if (weatherConditions["cloudy"].includes(currentConditions[0])) {
+    return "weather-icons/cloudy-icon.png";
+  } else if (weatherConditions["suncloud"].includes(currentConditions[0])) {
+    return "weather-icons/partly-cloudy-icon.png";
+  } else if (weatherConditions["rain"].includes(currentConditions[0])) {
+    return "weather-icons/rain-icon.png";
+  } else if (weatherConditions["snow"].includes(currentConditions[0])) {
+    return "weather-icons/snow-icon.png";
+  } else if (weatherConditions["clear"].includes(currentConditions[0])) {
+    return "weather-icons/night-clear-icon.png";
+  } else {
+    return "nothing";
+  }
 };
 
 const temperatureExtract = (req, res) => {
@@ -41,6 +60,7 @@ const temperatureExtract = (req, res) => {
               province: province,
               temperature: `${unitConvert(temperature)} °F`,
               currentConditions: currentConditions,
+              iconCondition: iconCondition(currentConditions),
             });
           } else {
             res.render("city", {
@@ -48,6 +68,8 @@ const temperatureExtract = (req, res) => {
               province: province,
               temperature: `${temperature} °C`,
               currentConditions: currentConditions,
+              iconCondition: iconCondition(currentConditions),
+            
             });
           }
         });
