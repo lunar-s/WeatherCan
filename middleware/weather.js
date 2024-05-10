@@ -10,8 +10,20 @@ const unitConvert = (temperature) => {
 };
 
 const iconCondition = (currentConditions) => {
-  if (conditionSunny.includes(currentConditions)) {
-    return "link_to_image";
+  if (weatherConditions["sunny"].includes(currentConditions[0])) {
+    return "weather-icons/sunny-icon.png";
+  } else if (weatherConditions["cloudy"].includes(currentConditions[0])) {
+    return "weather-icons/cloudy-icon.png";
+  } else if (weatherConditions["suncloud"].includes(currentConditions[0])) {
+    return "weather-icons/partly-cloudy-icon.png";
+  } else if (weatherConditions["rain"].includes(currentConditions[0])) {
+    return "weather-icons/rain-icon.png";
+  } else if (weatherConditions["snow"].includes(currentConditions[0])) {
+    return "weather-icons/snow-icon.png";
+  } else if (weatherConditions["clear"].includes(currentConditions[0])) {
+    return "weather-icons/night-clear-icon.png";
+  } else {
+    return "nothing";
   }
 };
 
@@ -42,14 +54,13 @@ const temperatureExtract = (req, res) => {
             result.siteData.currentConditions[0].temperature[0]["_"];
           const currentConditions =
             result.siteData.currentConditions[0].condition;
-          console.log(currentConditions);
           if (unitType === "fahrenheit") {
             res.render("city", {
               city: cityName,
               province: province,
               temperature: `${unitConvert(temperature)} °F`,
               currentConditions: currentConditions,
-              iconCondition: iconCondition(),
+              iconCondition: iconCondition(currentConditions),
             });
           } else {
             res.render("city", {
@@ -57,11 +68,8 @@ const temperatureExtract = (req, res) => {
               province: province,
               temperature: `${temperature} °C`,
               currentConditions: currentConditions,
-              conditionSunny: weatherConditions["sunny"],
-              conditionSuncloud: weatherConditions["suncloud"],
-              conditionRain: weatherConditions["rain"],
-              conditionSnow: weatherConditions["snow"],
-              conditionCloudy: weatherConditions["cloudy"],
+              iconCondition: iconCondition(currentConditions),
+            
             });
           }
         });

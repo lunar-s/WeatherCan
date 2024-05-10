@@ -5,19 +5,5 @@
   <p></p>
   <p id="temperature">Temperature: <%= temperature %></p>
   <p id="currentConditions">Current Conditions: <%= currentConditions %></p>
-  <p>testing: <%= conditionSunny %></p>
-  <% if (currentConditions in conditionSunny) { %>
-    <p>sunny</p>
-  <% } else if (currentConditions in conditionSnow ) { %>
-    <p>snow</p>
-  <% } else if (currentConditions in conditionSuncloud ) { %>
-    <p>suncloud</p>
-  <% } else if (currentConditions in conditionRain ) { %>
-    <p>rain</p>
-  <% } else if (currentConditions in conditionCloudy ) { %>
-    <p>cloudy</p>
-  <% } else { %>
-    <p>no weather icon</p>
-  <% } %>
-
+  <img id="weatherIcon" src="<%= iconCondition %>">
 </div>

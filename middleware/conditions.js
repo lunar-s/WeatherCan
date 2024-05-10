@@ -50,6 +50,10 @@ const weatherConditions = {
     "Rain and Snow",
     "Light Flurries",
   ],
+  clear: [
+    "Clear",
+    "Mainly Clear",
+  ],
 };
 
 module.exports = weatherConditions;
