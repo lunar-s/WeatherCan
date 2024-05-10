@@ -1,4 +1,3 @@
-const fs = require("fs");
 const https = require("https");
 const cityFinder = require("../controller/cityFinder");
 const parseString = require("xml2js").parseString;
