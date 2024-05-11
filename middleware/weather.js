@@ -73,6 +73,7 @@ const temperatureExtract = (req, res) => {
               temperature: `${forecast.temperature} °C`,
               currentConditions: forecast.currentConditions,
               iconCondition: iconCondition(forecast.currentConditions),
+              dateTime: forecast.dateTime,
             });
           }
           // COMMENT BELOW FOR TESTING PURPOSES
