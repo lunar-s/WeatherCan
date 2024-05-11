@@ -21,6 +21,18 @@ const forecastData = (result) => {
       result.siteData.forecastGroup[0].forecast[3].textSummary[0],
     overmorrowNightConditions:
       result.siteData.forecastGroup[0].forecast[4].textSummary[0],
+
+    // adding extra stuff to use iconCondition function -kevin
+    tonightCondition:
+      result.siteData.forecastGroup[0].forecast[0].abbreviatedForecast[0].textSummary[0],
+    tomorrowCondition:
+      result.siteData.forecastGroup[0].forecast[1].abbreviatedForecast[0].textSummary[0],
+    tomorrowNightCondition:
+      result.siteData.forecastGroup[0].forecast[2].abbreviatedForecast[0].textSummary[0],
+    overmorrowCondition:
+      result.siteData.forecastGroup[0].forecast[3].abbreviatedForecast[0].textSummary[0],
+    overmorrowNightCondition:
+      result.siteData.forecastGroup[0].forecast[4].abbreviatedForecast[0].textSummary[0],
   };
 };
 
@@ -29,11 +41,16 @@ const forecastData = (result) => {
 // const forecast = forecastData(result);
 // console.log(forecast.dateTime);
 // console.log("Tonight: " + forecast.tonightConditions);
+// console.log("Tonight: " + forecast.tonightCondition);
 // console.log();
 // console.log(`${forecast.tomorrowDay}: ${forecast.tomorrowConditions}`);
+// console.log(`${forecast.tomorrowDay}: ${forecast.tomorrowCondition}`);
 // console.log("Night: " + forecast.tomorrowNightConditions);
+// console.log("Night: " + forecast.tomorrowNightCondition);
 // console.log();
 // console.log(`${forecast.overmorrowDay}: ${forecast.overmorrowConditions}`);
+// console.log(`${forecast.tomorrowDay}: ${forecast.overmorrowCondition}`);
 // console.log("Night: " + forecast.overmorrowNightConditions);
+// console.log("Night: " + forecast.overmorrowNightCondition);
 
 module.exports = forecastData;
