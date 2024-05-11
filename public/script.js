@@ -4,13 +4,13 @@ const temp = document.querySelector("#temperature"); //should I add an ID to the
 checkBox.addEventListener("change", (e) => {
   if (checkBox.checked) {
     tempString = temp.innerHTML;
-    tempValueC = parseFloat(tempString.slice(13, 18));
+    tempValueC = parseFloat(tempString);
     tempValueF = tempValueC * 1.8 + 32;
-    temp.innerHTML = `Temperature: ${tempValueF.toFixed(1)} °F`;
+    temp.innerHTML = `${tempValueF.toFixed(1)} °F`;
   } else {
     tempString = temp.innerHTML;
-    tempValueF = parseFloat(tempString.slice(13, 18));
+    tempValueF = parseFloat(tempString);
     tempValueC = (tempValueF - 32) * (5 / 9);
-    temp.innerHTML = `Temperature: ${tempValueC.toFixed(1)} °C`;
+    temp.innerHTML = `${tempValueC.toFixed(1)} °C`;
   }
 });
