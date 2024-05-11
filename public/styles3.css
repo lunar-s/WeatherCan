@@ -133,3 +133,19 @@ hr {
     padding: 20px;
     color: white;
 }
+
+#tonight-conditions {
+    display: flex;
+    flex-direction: row;
+}
+
+#tonight-conditions p {
+    font-size: x-large;
+    padding: 0px;
+    margin: 0px;
+}
+
+.small-icon {
+    width: 94.5px;
+    height: 71px;
+}

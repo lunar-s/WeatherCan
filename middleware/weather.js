@@ -10,17 +10,17 @@ const unitConvert = (temperature) => {
 };
 
 const iconCondition = (currentConditions) => {
-  if (weatherConditions["sunny"].includes(currentConditions[0])) {
+  if (weatherConditions["sunny"].includes(currentConditions)) {
     return "weather-icons/sunny-icon.png";
-  } else if (weatherConditions["cloudy"].includes(currentConditions[0])) {
+  } else if (weatherConditions["cloudy"].includes(currentConditions)) {
     return "weather-icons/cloudy-icon.png";
-  } else if (weatherConditions["suncloud"].includes(currentConditions[0])) {
+  } else if (weatherConditions["suncloud"].includes(currentConditions)) {
     return "weather-icons/partly-cloudy-icon.png";
-  } else if (weatherConditions["rain"].includes(currentConditions[0])) {
+  } else if (weatherConditions["rain"].includes(currentConditions)) {
     return "weather-icons/rain-icon.png";
-  } else if (weatherConditions["snow"].includes(currentConditions[0])) {
+  } else if (weatherConditions["snow"].includes(currentConditions)) {
     return "weather-icons/snow-icon.png";
-  } else if (weatherConditions["clear"].includes(currentConditions[0])) {
+  } else if (weatherConditions["clear"].includes(currentConditions)) {
     return "weather-icons/night-clear-icon.png";
   } else {
     return "weather-icons/question-mark-icon.npg";
@@ -63,8 +63,10 @@ const temperatureExtract = (req, res) => {
               province: province,
               temperature: `${unitConvert(forecast.temperature)} °F`,
               currentConditions: forecast.currentConditions,
-              iconCondition: iconCondition(forecast.currentConditions),
+              iconCondition: iconCondition(forecast.currentConditions[0]),
               dateTime: forecast.dateTime,
+              tonightConditions: forecast.tonightConditions,
+              tonightIcon: iconCondition(forecast.tonightCondition), 
             });
           } else {
             res.render("city", {
@@ -72,8 +74,10 @@ const temperatureExtract = (req, res) => {
               province: province,
               temperature: `${forecast.temperature} °C`,
               currentConditions: forecast.currentConditions,
-              iconCondition: iconCondition(forecast.currentConditions),
+              iconCondition: iconCondition(forecast.currentConditions[0]),
               dateTime: forecast.dateTime,
+              tonightConditions: forecast.tonightConditions,
+              tonightIcon: iconCondition(forecast.tonightCondition), 
             });
           }
           // COMMENT BELOW FOR TESTING PURPOSES
