@@ -1,70 +1,61 @@
 <div class="bothside">
-
   <!-- left side css -->
   <div class="leftside">
-
     <div class="overview">
-    <!-- THIS IS FOR TITLE, TIME, AND CURRENT FORECAST -->
-    
+      <!-- THIS IS FOR TITLE, TIME, AND CURRENT FORECAST -->
+
       <div class="title">
-      <!-- THIS IS FOR TITLE, TIME -->
+        <!-- THIS IS FOR TITLE, TIME -->
 
-        <h2> <%= city %>, <%= province %> </h2>
+        <h2><%= city %>, <%= province %></h2>
 
-        <hr>
-        
+        <hr />
+
         <p><%= dateTime %></p>
 
         <!-- add line -->
 
         <!-- add time -->
-
       </div>
 
       <div class="forecast">
-      <!-- THIS IS FOR CURRENT FORECAST -->
+        <!-- THIS IS FOR CURRENT FORECAST -->
 
         <!-- THROW IN PIC OF FORECAST -->
-        <img src="<%= iconCondition %>">
+        <img src="<%= iconCondition %>" />
         <p id="temperature"><%= temperature %></p>
-
       </div>
-
     </div>
 
     <div id="tonight-conditions">
-    <!-- THIS IS FOR TONIGHT CONDITIONS --> 
-      <img class="small-icon" src="<%= tonightIcon %>">
+      <!-- THIS IS FOR TONIGHT CONDITIONS -->
+      <img class="small-icon" src="<%= tonightIcon %>" />
       <p class="future">Tonight: <%= tonightConditions %></p>
     </div>
     <div class="future">
-    <!-- THIS IS FOR FUTURE FORECAST (THAT BOTTOM SIDE) -->
+      <!-- THIS IS FOR FUTURE FORECAST (THAT BOTTOM SIDE) -->
 
       <!-- yeah throw it in here -->
-      <p>mon (icon)</p>
-      <p>tues (icon)</p>
-      <p>wed (icon)</p>
-
     </div>
 
-  <!-- end of left side css -->
+    <!-- end of left side css -->
   </div>
 
   <!-- right side css -->
   <!-- this side will only occasionally be up -->
 
   <div class="rightside">
-
-    <div class="alert">
-      <h2>ALERT</h2>
+    <div hidden class="alert">
+      <h2 hidden>ALERT</h2>
     </div>
 
     <div class="icons">
-      <p>HI!</p>
-      <p>HI!</p>
-      <p>HI!</p>
+      <!-- first card -->
+      <!-- end of first card -->
+      <p><%= tomorrowDay %>: <%= tomorrowConditions %></p>
+      <img class="small-icon" src="<%= tomorrowIcon %>" />
+      <p><%= overmorrowDay %>: <%= overmorrowConditions %></p>
+      <img class="small-icon" src="<%= overmorrowIcon %>" />
     </div>
-
   </div>
-
 </div>
