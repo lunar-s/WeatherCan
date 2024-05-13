@@ -17,9 +17,14 @@
   },
   "homepage": "https://github.com/lunar-s/WeatherOrNot#readme",
   "dependencies": {
+    "chai": "^5.1.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-ejs-layouts": "^2.5.1",
+    "mocha": "^10.4.0",
     "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
   }
 }
