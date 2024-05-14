@@ -10,17 +10,17 @@ const unitConvert = (temperature) => {
 };
 
 const iconCondition = (currentConditions) => {
-  if (weatherConditions["sunny"].includes(currentConditions)) {
+  if (weatherConditions["sunny"].includes(currentConditions.toLowerCase())) {
     return "weather-icons/sunny-icon.png";
-  } else if (weatherConditions["cloudy"].includes(currentConditions)) {
+  } else if (weatherConditions["cloudy"].includes(currentConditions.toLowerCase())) {
     return "weather-icons/cloudy-icon.png";
-  } else if (weatherConditions["suncloud"].includes(currentConditions)) {
+  } else if (weatherConditions["suncloud"].includes(currentConditions.toLowerCase())) {
     return "weather-icons/partly-cloudy-icon.png";
-  } else if (weatherConditions["rain"].includes(currentConditions)) {
+  } else if (weatherConditions["rain"].includes(currentConditions.toLowerCase())) {
     return "weather-icons/rain-icon.png";
-  } else if (weatherConditions["snow"].includes(currentConditions)) {
+  } else if (weatherConditions["snow"].includes(currentConditions.toLowerCase())) {
     return "weather-icons/snow-icon.png";
-  } else if (weatherConditions["clear"].includes(currentConditions)) {
+  } else if (weatherConditions["clear"].includes(currentConditions.toLowerCase())) {
     return "weather-icons/night-clear-icon.png";
   } else {
     return "weather-icons/question-mark-icon.png";
