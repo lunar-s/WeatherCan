@@ -11,28 +11,47 @@ const forecastData = (result) => {
     }`,
     tonightConditions:
       result.siteData.forecastGroup[0].forecast[0].textSummary[0],
-    tomorrowDay: result.siteData.forecastGroup[0].forecast[1].period[0]["_"],
+    tomorrowDay:
+      result.siteData.forecastGroup[0].forecast[1].period[0]["_"],
     tomorrowConditions:
       result.siteData.forecastGroup[0].forecast[1].textSummary[0],
     tomorrowNightConditions:
       result.siteData.forecastGroup[0].forecast[2].textSummary[0],
-    overmorrowDay: result.siteData.forecastGroup[0].forecast[3].period[0]["_"],
+    overmorrowDay:
+      result.siteData.forecastGroup[0].forecast[3].period[0]["_"],
     overmorrowConditions:
       result.siteData.forecastGroup[0].forecast[3].textSummary[0],
     overmorrowNightConditions:
       result.siteData.forecastGroup[0].forecast[4].textSummary[0],
+    fourthmorrowDay:
+      result.siteData.forecastGroup[0].forecast[5].period[0]["_"],
+    fourthmorrowConditions:
+      result.siteData.forecastGroup[0].forecast[5].textSummary[0],
+    fourthmorrowNightConditions:
+      result.siteData.forecastGroup[0].forecast[6].textSummary[0],
 
     // adding extra stuff to use iconCondition function -kevin
-    tonightCondition:
-      result.siteData.forecastGroup[0].forecast[0].abbreviatedForecast[0].textSummary[0],
-    tomorrowCondition:
-      result.siteData.forecastGroup[0].forecast[1].abbreviatedForecast[0].textSummary[0],
-    tomorrowNightCondition:
-      result.siteData.forecastGroup[0].forecast[2].abbreviatedForecast[0].textSummary[0],
-    overmorrowCondition:
-      result.siteData.forecastGroup[0].forecast[3].abbreviatedForecast[0].textSummary[0],
-    overmorrowNightCondition:
-      result.siteData.forecastGroup[0].forecast[4].abbreviatedForecast[0].textSummary[0],
+    tonightSummary:
+      result.siteData.forecastGroup[0].forecast[0].abbreviatedForecast[0]
+        .textSummary[0],
+    tomorrowSummary:
+      result.siteData.forecastGroup[0].forecast[1].abbreviatedForecast[0]
+        .textSummary[0],
+    tomorrowNightSummary:
+      result.siteData.forecastGroup[0].forecast[2].abbreviatedForecast[0]
+        .textSummary[0],
+    overmorrowSummary:
+      result.siteData.forecastGroup[0].forecast[3].abbreviatedForecast[0]
+        .textSummary[0],
+    overmorrowNightSummary:
+      result.siteData.forecastGroup[0].forecast[4].abbreviatedForecast[0]
+        .textSummary[0],
+    fourthmorrowSummary:
+      result.siteData.forecastGroup[0].forecast[5].abbreviatedForecast[0]
+        .textSummary[0],
+    fourthmorrowNightSummary:
+      result.siteData.forecastGroup[0].forecast[6].abbreviatedForecast[0]
+        .textSummary[0],
   };
 };
 
