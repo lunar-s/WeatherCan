@@ -43,7 +43,7 @@ h1 {
 
 .leftside {
   width: 65%;
-  height: 90%;
+  height: auto;
   background-color: rgba(70, 151, 221, 0.666);
   margin: 20px;
   padding: 20px;
