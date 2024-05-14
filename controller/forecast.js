@@ -1,3 +1,6 @@
+const date = require('date-and-time');
+
+
 const forecastData = (result) => {
   return {
     temperature: result.siteData.currentConditions[0].temperature[0]["_"],
@@ -28,149 +31,127 @@ const forecastData = (result) => {
     fourthmorrowNightConditions:
       result.siteData.forecastGroup[0].forecast[6].textSummary[0],
 
+    hourlyOffset: result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset,
+
     hourly: [
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[0]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[0]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[0].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[1]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[1]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[1].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[2]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[2]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[2].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[3]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[3]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[3].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[4]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[4]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[4].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[5]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[5]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[5].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[6]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[6]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[6].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[7]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[7]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[7].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[8]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[8]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[8].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[9]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[9]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[9].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[10]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[10]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[10].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[11]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[11]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[11].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[0]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[12]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[12].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[1]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[13]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[13].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[2]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[14]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[14].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[3]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[15]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[15].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[4]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[16]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[16].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[5]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[17]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[17].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[6]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[18]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[18].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[7]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[19]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[19].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[8]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[20]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[20].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[9]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[21]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[21].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[10]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[22]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[22].temperature[0]["_"],
         cond: "cond",
       },
       {
-        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[11]["$"]
-          .dateTimeUTC,
-        temp: "temp",
+        time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[23]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
+        temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[23].temperature[0]["_"],
         cond: "cond",
       },
     ],
@@ -202,6 +183,8 @@ const forecastData = (result) => {
 // UNCOMMENT BELOW FOR TESTING
 // const result = require("./test_data.json");
 // const forecast = forecastData(result);
+// let rightnow = date.parse(forecast.hourly[0].time, "YYYYMMDDHHmmss", true)
+// console.log(date.format(rightnow, "hA", true))
 // console.log(forecast.dateTime);
 // console.log("Tonight: " + forecast.tonightConditions);
 // console.log("Tonight: " + forecast.tonightCondition);
