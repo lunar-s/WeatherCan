@@ -1,6 +1,6 @@
 const weatherConditions = {
   sunny: ["Sunny", "Mainly Sunny"],
-  suncloud: ["Partly Cloudy", "Mostly Cloudy"],
+  suncloud: ["Partly Cloudy", "Mostly Cloudy", "A mix of sun and cloud"],
   cloudy: [
     "Haze",
     "Fog",
@@ -50,10 +50,7 @@ const weatherConditions = {
     "Rain and Snow",
     "Light Flurries",
   ],
-  clear: [
-    "Clear",
-    "Mainly Clear",
-  ],
+  clear: ["Clear", "Mainly Clear"],
 };
 
 module.exports = weatherConditions;
