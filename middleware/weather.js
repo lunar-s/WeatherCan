@@ -57,35 +57,31 @@ const temperatureExtract = (req, res) => {
     const result = require("../controller/test_data.json");
     const forecast = forecastData(result);
 
-    if (unitType === "fahrenheit") {
-      res.render("city", {
-        city: cityName,
-        province: province,
-        temperature: `${unitConvert(forecast.temperature)} °F`,
-        currentConditions: forecast.currentConditions,
-        iconCondition: iconCondition(forecast.currentConditions[0]),
-        dateTime: forecast.dateTime,
-        tonightConditions: forecast.tonightConditions,
-        tonightIcon: iconCondition(forecast.tonightCondition),
-      });
-    } else {
-      res.render("city", {
-        city: cityName,
-        province: province,
-        temperature: `${forecast.temperature} °C`,
-        currentConditions: forecast.currentConditions,
-        iconCondition: iconCondition(forecast.currentConditions[0]),
-        dateTime: forecast.dateTime,
-        tonightConditions: forecast.tonightConditions,
-        tonightIcon: iconCondition(forecast.tonightCondition),
-        tomorrowDay: forecast.tomorrowDay,
-        tomorrowConditions: forecast.tomorrowConditions,
-        tomorrowIcon: iconCondition(forecast.tomorrowCondition),
-        overmorrowDay: forecast.overmorrowDay,
-        overmorrowConditions: forecast.overmorrowConditions,
-        overmorrowIcon: iconCondition(forecast.overmorrowCondition),
-      });
-    }
+    res.render("city", {
+      city: cityName,
+      province: province,
+      temperature: `${forecast.temperature} °C`,
+      currentConditions: forecast.currentConditions,
+      iconCondition: iconCondition(forecast.currentConditions[0]),
+      dateTime: forecast.dateTime,
+      tonightConditions: forecast.tonightConditions,
+      tonightSummary: forecast.tonightSummary,
+      tonightIcon: iconCondition(forecast.tonightSummary),
+      tomorrowDay: forecast.tomorrowDay,
+      tomorrowConditions: forecast.tomorrowConditions,
+      tomorrowSummary: forecast.tomorrowSummary,
+      tonightSummary: forecast.tonightSummary,
+      tomorrowIcon: iconCondition(forecast.tomorrowSummary),
+      overmorrowDay: forecast.overmorrowDay,
+      overmorrowConditions: forecast.overmorrowConditions,
+      overmorrowSummary: forecast.overmorrowSummary,
+      overmorrowIcon: iconCondition(forecast.overmorrowSummary),
+      fourthmorrowDay: forecast.fourthmorrowDay,
+      fourthmorrowConditions: forecast.fourthmorrowConditions,
+      fourthmorrowSummary: forecast.fourthmorrowSummary,
+      fourthmorrowIcon: iconCondition(forecast.fourthmorrowSummary),
+    });
+
     // COMMENT BELOW FOR TESTING PURPOSES
     //     });
     //   });
