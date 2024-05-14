@@ -38,6 +38,7 @@ const weatherConditions = {
     "Thunderstorm with Light Rain",
     "Freezing Drizzle",
     "Freezing Rain",
+    "Showers",
   ],
   snow: [
     "Heavy Rain and Snow",
