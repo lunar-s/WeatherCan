@@ -34,7 +34,43 @@
     </div>
     <div class="future">
       <!-- THIS IS FOR FUTURE FORECAST (THAT BOTTOM SIDE) -->
-
+      <div class="container text-center">
+        <div class="row my-5 align-items-center justify-content-center">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title"><%= tomorrowDay %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <img class="small-icon" src="<%= tomorrowIcon %>" />
+                </h6>
+                <p class="card-text fs-6"><%= tomorrowConditions %></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title"><%= overmorrowDay %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <img class="small-icon" src="<%= overmorrowIcon %>" />
+                </h6>
+                <p class="card-text fs-6"><%= overmorrowConditions %></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title"><%= fourthmorrowDay %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <img class="small-icon" src="<%= fourthmorrowIcon %>" />
+                </h6>
+                <p class="card-text fs-6"><%= fourthmorrowConditions %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- yeah throw it in here -->
     </div>
 
@@ -43,19 +79,4 @@
 
   <!-- right side css -->
   <!-- this side will only occasionally be up -->
-
-  <div class="rightside">
-    <div hidden class="alert">
-      <h2 hidden>ALERT</h2>
-    </div>
-
-    <div class="icons">
-      <!-- first card -->
-      <!-- end of first card -->
-      <p><%= tomorrowDay %>: <%= tomorrowConditions %></p>
-      <img class="small-icon" src="<%= tomorrowIcon %>" />
-      <p><%= overmorrowDay %>: <%= overmorrowConditions %></p>
-      <img class="small-icon" src="<%= overmorrowIcon %>" />
-    </div>
-  </div>
 </div>
