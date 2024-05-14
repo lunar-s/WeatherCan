@@ -30,7 +30,7 @@
     <div id="tonight-conditions">
       <!-- THIS IS FOR TONIGHT CONDITIONS -->
       <img class="small-icon" src="<%= tonightIcon %>" />
-      <p class="future">Tonight: <%= tonightConditions %></p>
+      <p id="tonightTemp" class="future">Tonight: <%= tonightConditions %></p>
     </div>
     <div class="future">
       <!-- THIS IS FOR FUTURE FORECAST (THAT BOTTOM SIDE) -->
@@ -43,7 +43,7 @@
                 <h6 class="card-subtitle mb-2 text-body-secondary">
                   <img class="small-icon" src="<%= tomorrowIcon %>" />
                 </h6>
-                <p class="card-text fs-6"><%= tomorrowConditions %></p>
+                <p id="tomorrowTemp" class="card-text fs-6"><%= tomorrowConditions %></p>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
                 <h6 class="card-subtitle mb-2 text-body-secondary">
                   <img class="small-icon" src="<%= overmorrowIcon %>" />
                 </h6>
-                <p class="card-text fs-6"><%= overmorrowConditions %></p>
+                <p id="overmorrowTemp" class="card-text fs-6"><%= overmorrowConditions %></p>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
                 <h6 class="card-subtitle mb-2 text-body-secondary">
                   <img class="small-icon" src="<%= fourthmorrowIcon %>" />
                 </h6>
-                <p class="card-text fs-6"><%= fourthmorrowConditions %></p>
+                <p id="fourthmorrowTemp" class="card-text fs-6"><%= fourthmorrowConditions %></p>
               </div>
             </div>
           </div>
