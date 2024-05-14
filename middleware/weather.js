@@ -60,7 +60,7 @@ const temperatureExtract = (req, res) => {
     res.render("city", {
       city: cityName,
       province: province,
-      temperature: `${forecast.temperature} °C`,
+      temperature: `${forecast.temperature}°C`,
       currentConditions: forecast.currentConditions,
       iconCondition: iconCondition(forecast.currentConditions[0]),
       dateTime: forecast.dateTime,
