@@ -33,7 +33,7 @@
       <p class="future">Tonight: <%= tonightConditions %></p>
     </div>
     <!-- accordion carousel -->
-    <div class="accordion" id="accordionExample" hidden>
+    <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button
@@ -51,20 +51,111 @@
           id="collapseOne"
           class="accordion-collapse collapse show"
           data-bs-parent="#accordionExample"
-          hidden
         >
           <div class="accordion-body">
             <!-- carousel -->
             <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
+              <div class="carousel-inner fs-6">
+                <!-- table1 -->
                 <div class="carousel-item active">
-                  <p>12pm: 5 deg</p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <td><%= hourlyForecast[0].time %></td>
+                        <td><%= hourlyForecast[1].time %></td>
+                        <td><%= hourlyForecast[2].time %></td>
+                        <td><%= hourlyForecast[3].time %></td>
+                        <td><%= hourlyForecast[4].time %></td>
+                        <td><%= hourlyForecast[5].time %></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td><%= hourlyForecast[0].temp %></td>
+                      <td><%= hourlyForecast[1].temp %></td>
+                      <td><%= hourlyForecast[2].temp %></td>
+                      <td><%= hourlyForecast[3].temp %></td>
+                      <td><%= hourlyForecast[4].temp %></td>
+                      <td><%= hourlyForecast[5].temp %></td>
+                    </tbody>
+                  </table>
                 </div>
+                <!-- table2 -->
                 <div class="carousel-item">
-                  <p>1pm: 6 deg</p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <td><%= hourlyForecast[6].time %></td>
+                        <td><%= hourlyForecast[7].time %></td>
+                        <td><%= hourlyForecast[8].time %></td>
+                        <td><%= hourlyForecast[9].time %></td>
+                        <td><%= hourlyForecast[10].time %></td>
+                        <td><%= hourlyForecast[11].time %></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td><%= hourlyForecast[6].temp %></td>
+                      <td><%= hourlyForecast[7].temp %></td>
+                      <td><%= hourlyForecast[8].temp %></td>
+                      <td><%= hourlyForecast[9].temp %></td>
+                      <td><%= hourlyForecast[10].temp %></td>
+                      <td><%= hourlyForecast[11].temp %></td>
+                    </tbody>
+                  </table>
                 </div>
+                <!-- table3 -->
                 <div class="carousel-item">
-                  <p>2pm: 7 deg</p>
+                  <table class="table">
+                    <thead>
+                      <tr></tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+                <!-- table4 -->
+                <div class="carousel-item">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <td><%= hourlyForecast[12].time %></td>
+                        <td><%= hourlyForecast[13].time %></td>
+                        <td><%= hourlyForecast[14].time %></td>
+                        <td><%= hourlyForecast[15].time %></td>
+                        <td><%= hourlyForecast[16].time %></td>
+                        <td><%= hourlyForecast[17].time %></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td><%= hourlyForecast[12].temp %></td>
+                      <td><%= hourlyForecast[13].temp %></td>
+                      <td><%= hourlyForecast[14].temp %></td>
+                      <td><%= hourlyForecast[15].temp %></td>
+                      <td><%= hourlyForecast[16].temp %></td>
+                      <td><%= hourlyForecast[17].temp %></td>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- table5 -->
+                <div class="carousel-item">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <td><%= hourlyForecast[18].time %></td>
+                        <td><%= hourlyForecast[19].time %></td>
+                        <td><%= hourlyForecast[20].time %></td>
+                        <td><%= hourlyForecast[21].time %></td>
+                        <td><%= hourlyForecast[22].time %></td>
+                        <td><%= hourlyForecast[23].time %></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td><%= hourlyForecast[18].temp %></td>
+                      <td><%= hourlyForecast[19].temp %></td>
+                      <td><%= hourlyForecast[20].temp %></td>
+                      <td><%= hourlyForecast[21].temp %></td>
+                      <td><%= hourlyForecast[22].temp %></td>
+                      <td><%= hourlyForecast[23].temp %></td>
+                    </tbody>
+                  </table>
                 </div>
               </div>
               <button
@@ -102,7 +193,7 @@
       <div class="container text-center">
         <div class="row my-5 align-items-center justify-content-center">
           <div class="col">
-            <div class="card" style="width: 18rem">
+            <div class="card" style="width: 18rem; height: 210px">
               <div class="card-body">
                 <h5 class="card-title"><%= tomorrowDay %></h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -113,7 +204,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card" style="width: 18rem">
+            <div class="card" style="width: 18rem; height: 210px">
               <div class="card-body">
                 <h5 class="card-title"><%= overmorrowDay %></h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -124,7 +215,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card" style="width: 18rem">
+            <div class="card" style="width: 18rem; height: 210px">
               <div class="card-body">
                 <h5 class="card-title"><%= fourthmorrowDay %></h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">
