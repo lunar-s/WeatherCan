@@ -11,14 +11,12 @@ const forecastData = (result) => {
     }`,
     tonightConditions:
       result.siteData.forecastGroup[0].forecast[0].textSummary[0],
-    tomorrowDay:
-      result.siteData.forecastGroup[0].forecast[1].period[0]["_"],
+    tomorrowDay: result.siteData.forecastGroup[0].forecast[1].period[0]["_"],
     tomorrowConditions:
       result.siteData.forecastGroup[0].forecast[1].textSummary[0],
     tomorrowNightConditions:
       result.siteData.forecastGroup[0].forecast[2].textSummary[0],
-    overmorrowDay:
-      result.siteData.forecastGroup[0].forecast[3].period[0]["_"],
+    overmorrowDay: result.siteData.forecastGroup[0].forecast[3].period[0]["_"],
     overmorrowConditions:
       result.siteData.forecastGroup[0].forecast[3].textSummary[0],
     overmorrowNightConditions:
@@ -30,80 +28,152 @@ const forecastData = (result) => {
     fourthmorrowNightConditions:
       result.siteData.forecastGroup[0].forecast[6].textSummary[0],
 
-    hourly: {
-      hour1:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[0]["$"]
+    hourly: [
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[0]["$"]
           .dateTimeUTC,
-      hour2:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[1]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[1]["$"]
           .dateTimeUTC,
-      hour3:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[2]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[2]["$"]
           .dateTimeUTC,
-      hour4:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[3]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[3]["$"]
           .dateTimeUTC,
-      hour5:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[4]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[4]["$"]
           .dateTimeUTC,
-      hour6:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[5]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[5]["$"]
           .dateTimeUTC,
-      hour7:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[6]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[6]["$"]
           .dateTimeUTC,
-      hour8:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[7]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[7]["$"]
           .dateTimeUTC,
-      hour9:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[8]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[8]["$"]
           .dateTimeUTC,
-      hour10:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[9]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[9]["$"]
           .dateTimeUTC,
-      hour11:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[10]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[10]["$"]
           .dateTimeUTC,
-      hour12:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[11]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[11]["$"]
           .dateTimeUTC,
-      hour13:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[0]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[0]["$"]
           .dateTimeUTC,
-      hour14:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[1]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[1]["$"]
           .dateTimeUTC,
-      hour15:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[2]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[2]["$"]
           .dateTimeUTC,
-      hour16:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[3]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[3]["$"]
           .dateTimeUTC,
-      hour17:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[4]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[4]["$"]
           .dateTimeUTC,
-      hour18:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[5]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[5]["$"]
           .dateTimeUTC,
-      hour19:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[6]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[6]["$"]
           .dateTimeUTC,
-      hour20:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[7]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[7]["$"]
           .dateTimeUTC,
-      hour21:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[8]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[8]["$"]
           .dateTimeUTC,
-      hour22:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[9]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[9]["$"]
           .dateTimeUTC,
-      hour23:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[10]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[10]["$"]
           .dateTimeUTC,
-      hour24:
-        result.siteData.hourlyForecastGroup[0].hourlyForecast[11]["$"]
+        temp: "temp",
+        cond: "cond",
+      },
+      {
+        time: result.siteData.hourlyForecastGroup[0].hourlyForecast[11]["$"]
           .dateTimeUTC,
-    },
+        temp: "temp",
+        cond: "cond",
+      },
+    ],
     // Summaries for icons
     tonightSummary:
       result.siteData.forecastGroup[0].forecast[0].abbreviatedForecast[0]
