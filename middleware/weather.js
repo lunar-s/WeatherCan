@@ -80,6 +80,7 @@ const temperatureExtract = (req, res) => {
       fourthmorrowConditions: forecast.fourthmorrowConditions,
       fourthmorrowSummary: forecast.fourthmorrowSummary,
       fourthmorrowIcon: iconCondition(forecast.fourthmorrowSummary),
+      hourlyForecast: forecast.hourly,
     });
 
     // COMMENT BELOW FOR TESTING PURPOSES
