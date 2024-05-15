@@ -20,18 +20,18 @@ const temperatureExtract = (req, res) => {
     const url = `https://dd.weather.gc.ca/citypage_weather/xml/${province}/${cityCode}_e.xml`;
 
     // COMMENT BELOW FOR TESTING PURPOSES
-    https.get(url, (xml) => {
-      let data = "";
-      xml.on("data", (chunk) => {
-        data += chunk;
-      });
-      xml.on("end", () => {
-        parseString(data, (err, result) => {
-          if (err) throw err;
-          // STOP COMMENT HERE
-          // UNCOMMENT LINE BELOW FOR TESTING
-          // const result = require("../controller/test_data.json");
-          const forecast = forecastData(result);
+    // https.get(url, (xml) => {
+    //   let data = "";
+    //   xml.on("data", (chunk) => {
+    //     data += chunk;
+    //   });
+    //   xml.on("end", () => {
+    //     parseString(data, (err, result) => {
+    //       if (err) throw err;
+    // STOP COMMENT HERE
+    // UNCOMMENT LINE BELOW FOR TESTING
+    const result = require("../controller/test_data.json");
+    const forecast = forecastData(result);
 
           res.render("city", {
             city: cityName,
