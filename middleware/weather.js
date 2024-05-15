@@ -89,4 +89,4 @@ const temperatureExtract = (req, res) => {
   }
 };
 
-module.exports = temperatureExtract;
+module.exports = {temperatureExtract, iconCondition};
