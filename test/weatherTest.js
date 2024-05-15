@@ -1,11 +1,13 @@
 var server = require('supertest');
 var should = require('chai').should();
-var weather = require('../middleware/weather').iconCondition;
+var weather = require('../controller/forecast').iconCondition;
 
 describe("Icon", function() {
     it("should return sunny icon path", function() {
-        var condition = ["Sunny"];
+
+        var condition = "Sunny";
         var result = weather(condition);
+        console.log(result);
         should.equal(result, "weather-icons/sunny-icon.png");
     })
 })

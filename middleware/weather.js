@@ -60,9 +60,9 @@ const temperatureExtract = (req, res) => {
           });
 
           // COMMENT BELOW FOR TESTING PURPOSES
-        });
-      });
-    });
+    //     });
+    //   });
+    // });
     // STOP COMMENT HERE
   } else {
     res.render("404", {
