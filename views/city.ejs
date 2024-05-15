@@ -1,9 +1,265 @@
-<div class="container">
-  <p id="city">City: <%= city %></p>
-  <p></p>
-  <p id="province">Province: <%= province %></p>
-  <p></p>
-  <p id="temperature">Temperature: <%= temperature %></p>
-  <p id="currentConditions">Current Conditions: <%= currentConditions %></p>
-  <img id="weatherIcon" src="<%= iconCondition %>">
+<div class="bothside">
+  <!-- left side css -->
+  <div class="leftside">
+    <div class="overview">
+      <!-- THIS IS FOR TITLE, TIME, AND CURRENT FORECAST -->
+
+      <div class="title">
+        <!-- THIS IS FOR TITLE, TIME -->
+
+        <h2><%= city %>, <%= province %></h2>
+
+        <hr />
+
+        <p><%= dateTime %></p>
+
+        <!-- add line -->
+
+        <!-- add time -->
+      </div>
+
+      <div class="forecast">
+        <!-- THIS IS FOR CURRENT FORECAST -->
+
+        <!-- THROW IN PIC OF FORECAST -->
+        <img src="<%= iconCondition %>" />
+        <p class="temperature"><%= temperature %></p>
+      </div>
+    </div>
+
+    <div id="tonight-conditions">
+      <!-- THIS IS FOR TONIGHT CONDITIONS -->
+      <img class="small-icon" src="<%= tonightIcon %>" />
+      <p class="future">Tonight: <%= tonightConditions %></p>
+    </div>
+    <!-- accordion carousel -->
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Hourly Temperature
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <!-- carousel -->
+            <div id="carousel" class="carousel carousel-dark slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div>            
+              <div class="carousel-inner fs-6 text-center">
+                <!-- table1 -->
+                <div class="carousel-item active">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <td><%= hourlyForecast[0].time %></td>
+                        <td><%= hourlyForecast[1].time %></td>
+                        <td><%= hourlyForecast[2].time %></td>
+                        <td><%= hourlyForecast[3].time %></td>
+                        <td><%= hourlyForecast[4].time %></td>
+                        <td><%= hourlyForecast[5].time %></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td class="temperature"><%= hourlyForecast[0].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[1].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[2].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[3].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[4].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[5].temp %></td>
+                    </tbody>
+                    <tbody>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[0].icon %>" /><%= hourlyForecast[0].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[1].icon %>" /><%= hourlyForecast[1].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[2].icon %>" /><%= hourlyForecast[2].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[3].icon %>" /><%= hourlyForecast[3].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[4].icon %>" /><%= hourlyForecast[4].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[5].icon %>" /><%= hourlyForecast[5].cond %></td>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- table2 -->
+                <div class="carousel-item">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <td><%= hourlyForecast[6].time %></td>
+                        <td><%= hourlyForecast[7].time %></td>
+                        <td><%= hourlyForecast[8].time %></td>
+                        <td><%= hourlyForecast[9].time %></td>
+                        <td><%= hourlyForecast[10].time %></td>
+                        <td><%= hourlyForecast[11].time %></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td class="temperature"><%= hourlyForecast[6].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[7].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[8].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[9].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[10].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[11].temp %></td>
+                    </tbody>
+                    <tbody>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[6].icon %>" /><%= hourlyForecast[6].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[7].icon %>" /><%= hourlyForecast[7].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[8].icon %>" /><%= hourlyForecast[8].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[9].icon %>" /><%= hourlyForecast[9].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[10].icon %>" /><%= hourlyForecast[10].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[11].icon %>" /><%= hourlyForecast[11].cond %></td>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- table3 -->
+                <div class="carousel-item">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <td><%= hourlyForecast[12].time %></td>
+                        <td><%= hourlyForecast[13].time %></td>
+                        <td><%= hourlyForecast[14].time %></td>
+                        <td><%= hourlyForecast[15].time %></td>
+                        <td><%= hourlyForecast[16].time %></td>
+                        <td><%= hourlyForecast[17].time %></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td class="temperature"><%= hourlyForecast[12].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[13].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[14].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[15].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[16].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[17].temp %></td>
+                    </tbody>
+                    <tbody>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[12].icon %>" /><%= hourlyForecast[12].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[13].icon %>" /><%= hourlyForecast[13].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[14].icon %>" /><%= hourlyForecast[14].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[15].icon %>" /><%= hourlyForecast[15].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[16].icon %>" /><%= hourlyForecast[16].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[17].icon %>" /><%= hourlyForecast[17].cond %></td>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- table4 -->
+                <div class="carousel-item">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <td><%= hourlyForecast[18].time %></td>
+                        <td><%= hourlyForecast[19].time %></td>
+                        <td><%= hourlyForecast[20].time %></td>
+                        <td><%= hourlyForecast[21].time %></td>
+                        <td><%= hourlyForecast[22].time %></td>
+                        <td><%= hourlyForecast[23].time %></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td class="temperature"><%= hourlyForecast[18].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[19].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[20].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[21].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[22].temp %></td>
+                      <td class="temperature"><%= hourlyForecast[23].temp %></td>
+                    </tbody>
+                    <tbody>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[18].icon %>" /><%= hourlyForecast[18].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[19].icon %>" /><%= hourlyForecast[19].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[20].icon %>" /><%= hourlyForecast[20].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[21].icon %>" /><%= hourlyForecast[21].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[22].icon %>" /><%= hourlyForecast[22].cond %></td>
+                      <td><img class="tiny-icon" src="<%= hourlyForecast[23].icon %>" /><%= hourlyForecast[23].cond %></td>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tomorrow, overmorrow, fourthmorrow -->
+    <div class="future">
+      <div class="container text-center">
+        <div class="row my-5 align-items-center justify-content-center">
+          <div class="col">
+            <div class="card" style="width: 18rem; height: 210px">
+              <div class="card-body">
+                <h5 class="card-title"><%= tomorrowDay %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <img class="small-icon" src="<%= tomorrowIcon %>" />
+                </h6>
+                <p class="card-text fs-6"><%= tomorrowConditions %></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; height: 210px">
+              <div class="card-body">
+                <h5 class="card-title"><%= overmorrowDay %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <img class="small-icon" src="<%= overmorrowIcon %>" />
+                </h6>
+                <p class="card-text fs-6"><%= overmorrowConditions %></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; height: 210px">
+              <div class="card-body">
+                <h5 class="card-title"><%= fourthmorrowDay %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <img class="small-icon" src="<%= fourthmorrowIcon %>" />
+                </h6>
+                <p class="card-text fs-6"><%= fourthmorrowConditions %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- yeah throw it in here -->
+    </div>
+    <p hidden><%= hourlyForecast.hour1 %></p>
+    <!-- right side css -->
+    <!-- this side will only occasionally be up -->
+  </div>
 </div>

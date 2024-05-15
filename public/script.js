@@ -1,16 +1,18 @@
 const checkBox = document.querySelector(".form-check-input");
-const temp = document.querySelector("#temperature"); //should I add an ID to the <p> element targeted here instead of using last child here?
+const temp = document.querySelectorAll(".temperature"); //should I add an ID to the <p> element targeted here instead of using last child here?
 
-checkBox.addEventListener("change", (e) => {
-  if (checkBox.checked) {
-    tempString = temp.innerHTML;
-    tempValueC = parseFloat(tempString.slice(13, 18));
-    tempValueF = tempValueC * 1.8 + 32;
-    temp.innerHTML = `Temperature: ${tempValueF.toFixed(1)} °F`;
-  } else {
-    tempString = temp.innerHTML;
-    tempValueF = parseFloat(tempString.slice(13, 18));
-    tempValueC = (tempValueF - 32) * (5 / 9);
-    temp.innerHTML = `Temperature: ${tempValueC.toFixed(1)} °C`;
+checkBox.addEventListener("change", () => {
+  for (let i = 0; i < temp.length; i++) {
+    if (checkBox.checked) {
+      tempString = temp[i].innerHTML;
+      tempValueC = parseFloat(tempString);
+      tempValueF = tempValueC * 1.8 + 32;
+      temp[i].innerHTML = `${tempValueF.toFixed()}°F`;
+    } else {
+      tempString = temp[i].innerHTML;
+      tempValueF = parseFloat(tempString);
+      tempValueC = (tempValueF - 32) * (5 / 9);
+      temp[i].innerHTML = `${tempValueC.toFixed()}°C`;
+    }
   }
 });

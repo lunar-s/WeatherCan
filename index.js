@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const ejsLayouts = require("express-ejs-layouts");
 // const { cities } = require("./cities.js");
-const temperatureExtract = require("./middleware/weather").temperatureExtract;
+const { temperatureExtract } = require("./middleware/weather");
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
