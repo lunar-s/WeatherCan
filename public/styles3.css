@@ -147,3 +147,22 @@ hr {
   width: 94.5px;
   height: 71px;
 }
+
+.tiny-icon {
+  width: 47.25px;
+  height: 35.5px;
+}
+
+.carousel-control-prev{
+  margin-left: -80px;
+  top: 10px
+}
+
+.carousel-control-next{
+  margin-right: -80px;
+  top: 10px
+}
+
+.carousel-indicators{
+  top: 145px;
+}
