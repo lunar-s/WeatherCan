@@ -177,3 +177,11 @@ div.container.text-center {
   margin-bottom: -10px;
   height: 290px;
 }
+
+.form-check-label {
+  width: 150px;
+}
+
+div.form-check.form-switch {
+  align-content: center;
+}
