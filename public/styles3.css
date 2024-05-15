@@ -73,9 +73,9 @@ hr {
 /* fortnite */
 
 .bothside {
-  margin: 0px;
+  margin-top: 50px;
   padding: 0px;
-  height: 90%;
+  height: 82%;
   width: 100%;
   font-size: xx-large;
 }
@@ -109,10 +109,10 @@ hr {
 }
 
 .future {
-  margin: 20px;
+  /* margin: 20px; */
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   color: white;
   flex-direction: column;
 }
@@ -165,4 +165,15 @@ hr {
 
 .carousel-indicators{
   top: 145px;
+}
+
+.col{
+  display: flex;
+  justify-content: center;
+}
+
+div.container.text-center {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  height: 290px;
 }
