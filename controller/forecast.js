@@ -24,13 +24,11 @@ const forecastData = (result) => {
   return {
     temperature: result.siteData.currentConditions[0].temperature[0]["_"],
     currentConditions: result.siteData.currentConditions[0].condition,
-    dateTime: `${result.siteData.dateTime[1].hour}:00 ${
-      result.siteData.dateTime[1]["$"].zone
-    } ${result.siteData.dateTime[1].day[0]["$"].name} ${parseInt(
-      result.siteData.dateTime[1].day[0]["_"]
-    )} ${result.siteData.dateTime[1].month[0]["$"].name} ${
-      result.siteData.dateTime[1].year
-    }`,
+    dateTime: `${date.format(date.parse(result.siteData.dateTime[1].hour[0], "HH", true), "hA", true)} ${result.siteData.dateTime[1]["$"].zone} 
+    ${result.siteData.dateTime[1].day[0]["$"].name} 
+    ${parseInt(result.siteData.dateTime[1].day[0]["_"])} 
+    ${result.siteData.dateTime[1].month[0]["$"].name} 
+    ${result.siteData.dateTime[1].year}`,
     tonightConditions:
       result.siteData.forecastGroup[0].forecast[0].textSummary[0],
     tomorrowDay: result.siteData.forecastGroup[0].forecast[1].period[0]["_"],
@@ -226,7 +224,9 @@ const forecastData = (result) => {
 // UNCOMMENT BELOW FOR TESTING
 // const result = require("./test_data.json");
 // const forecast = forecastData(result);
-// let rightnow = date.parse(forecast.hourly[0].time, "YYYYMMDDHHmmss", true)
+// let rightnow = date.parse(result.siteData.dateTime[1].hour[0], "HH", true)
+// console.log(result.siteData.dateTime[1].hour[0])
+// console.log(rightnow)
 // console.log(date.format(rightnow, "hA", true))
 // console.log(forecast.dateTime);
 // console.log("Tonight: " + forecast.tonightConditions);
