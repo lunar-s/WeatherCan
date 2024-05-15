@@ -1,8 +1,16 @@
-var assert = require('assert');
-describe('Array', function () {
-  describe('#indexOf()', function () {
-    it('should return -1 when the value is not present', function () {
-      assert.equal([1, 2, 3].indexOf(4), -1);
+var server = require('supertest');
+var should = require('chai').should();
+var app = require('../index');
+
+describe("Index", function() {
+    it("should pass", function(done){
+        server(app)
+        .get('/')
+        .end(function(err, res){
+            if(err) done(err);
+            should.equal(res.status, 200);
+            
+            done();
+        });
     });
-  });
 });

@@ -19,3 +19,5 @@ app.listen(8080, function () {
     "Server running. Visit: http://localhost:8080 in your browser 🚀"
   );
 });
+
+module.exports = app
