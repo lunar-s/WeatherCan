@@ -1,8 +1,82 @@
-<div class="container">
-  <p id="city">City: <%= city %></p>
-  <p></p>
-  <p id="province">Province: <%= province %></p>
-  <p></p>
-  <p id="temperature">Temperature: <%= temperature %></p>
-  <p id="currentConditions">Current Conditions: <%= currentConditions %></p>
+<div class="bothside">
+  <!-- left side css -->
+  <div class="leftside">
+    <div class="overview">
+      <!-- THIS IS FOR TITLE, TIME, AND CURRENT FORECAST -->
+
+      <div class="title">
+        <!-- THIS IS FOR TITLE, TIME -->
+
+        <h2><%= city %>, <%= province %></h2>
+
+        <hr />
+
+        <p><%= dateTime %></p>
+
+        <!-- add line -->
+
+        <!-- add time -->
+      </div>
+
+      <div class="forecast">
+        <!-- THIS IS FOR CURRENT FORECAST -->
+
+        <!-- THROW IN PIC OF FORECAST -->
+        <img src="<%= iconCondition %>" />
+        <p id="temperature"><%= temperature %></p>
+      </div>
+    </div>
+
+    <div id="tonight-conditions">
+      <!-- THIS IS FOR TONIGHT CONDITIONS -->
+      <img class="small-icon" src="<%= tonightIcon %>" />
+      <p id="tonightTemp" class="future">Tonight: <%= tonightConditions %></p>
+    </div>
+    <div class="future">
+      <!-- THIS IS FOR FUTURE FORECAST (THAT BOTTOM SIDE) -->
+      <div class="container text-center">
+        <div class="row my-5 align-items-center justify-content-center">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title"><%= tomorrowDay %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <img class="small-icon" src="<%= tomorrowIcon %>" />
+                </h6>
+                <p id="tomorrowTemp" class="card-text fs-6"><%= tomorrowConditions %></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title"><%= overmorrowDay %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <img class="small-icon" src="<%= overmorrowIcon %>" />
+                </h6>
+                <p id="overmorrowTemp" class="card-text fs-6"><%= overmorrowConditions %></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title"><%= fourthmorrowDay %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <img class="small-icon" src="<%= fourthmorrowIcon %>" />
+                </h6>
+                <p id="fourthmorrowTemp" class="card-text fs-6"><%= fourthmorrowConditions %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- yeah throw it in here -->
+    </div>
+
+    <!-- end of left side css -->
+  </div>
+
+  <!-- right side css -->
+  <!-- this side will only occasionally be up -->
 </div>
