@@ -16,6 +16,7 @@ const weatherConditions = {
     "cloudy",
     "mostly cloudy",
     "cloudy periods",
+    "mainly cloudy",
   ],
   rain: [
     "light rain shower",
@@ -60,7 +61,7 @@ const weatherConditions = {
     "rain and snow",
     "light flurries",
     "chance of flurries",
-    "periods of snow"
+    "periods of snow",
   ],
   clear: ["clear", "mainly clear"],
 };
