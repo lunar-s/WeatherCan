@@ -148,10 +148,9 @@ body {
   top: 0;
   border-radius: 10px;
 }
-<<<<<<< HEAD
 
 /* new addition */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
   
 
 .image-container {
@@ -191,14 +190,14 @@ input[type="text"] {
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
   
 
   .image-container {
     background-image: url("img_nature.jpg");
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 30%;
   }
   
   .text {
@@ -230,5 +229,3 @@ input[type="text"] {
   }
   
   }
-=======
->>>>>>> main
