@@ -49,6 +49,7 @@ const weatherConditions = {
     "showers",
     "a few showers",
     "chance of showers",
+    "periods of rain",
   ],
   snow: [
     "heavy rain and snow",
