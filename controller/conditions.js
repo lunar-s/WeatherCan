@@ -60,6 +60,7 @@ const weatherConditions = {
     "rain and snow",
     "light flurries",
     "chance of flurries",
+    "periods of snow"
   ],
   clear: ["clear", "mainly clear"],
 };
