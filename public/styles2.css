@@ -35,9 +35,9 @@ form {
 }
 
 input[type="text"] {
-  /* width: 60%; */
+  width: 30%;
   max-width: 300px;
-  /* padding: 15px; */
+  padding: 10px;
   /* font-size: 10px; */
   margin-bottom: 10px;
   margin-top: 5px;
@@ -61,22 +61,171 @@ body {
   background-image: url("img_nature.jpg");
   background-size: cover;
   position: relative;
-  height: 200px;
-  overflow: hidden;
+  height: 400px;
 }
 
 .text {
   background-color: white;
   color: black;
-  font-size: 4vw;
+  font-size: 5vw;
   font-weight: bold;
   margin: 0 auto;
   padding: 10px;
-  width: 30%;
+  width: 40%;
   text-align: center;
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
+  overflow: hidden;
 }
+
+/* fancy button */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* new addition */
+@media only screen and (max-width: 600px) {
+  
+
+.image-container {
+  background-image: url("img_nature.jpg");
+  background-size: cover;
+  position: relative;
+  height: 30%;
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 7vw;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  overflow: hidden;
+}
+
+
+input[type="text"] {
+  width: 45%;
+  max-width: 250px;
+  /* padding: 10px; */
+  /* font-size: 10px; */
+  margin-bottom: 10px;
+  margin-top: 5px;
+  height:30px
+}
+
+}
+
+@media only screen and (min-width: 600px) {
+  
+
+  .image-container {
+    background-image: url("img_nature.jpg");
+    background-size: cover;
+    position: relative;
+    height: 300px;
+  }
+  
+  .text {
+    background-color: white;
+    color: black;
+    font-size: 4vw;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    width: 40%;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    overflow: hidden;
+  }
+  
+  
+  input[type="text"] {
+    width: 40%;
+    max-width: 250px;
+    /* padding: 10px; */
+    /* font-size: 10px; */
+    margin-bottom: 10px;
+    margin-top: 5px;
+    height: 30px
+  }
+  
+  }
