@@ -1,4 +1,23 @@
 const date = require('date-and-time');
+const weatherConditions = require("./conditions");
+
+const iconCondition = (condition) => {
+  if (weatherConditions["sunny"].includes(condition.toLowerCase())) {
+    return "weather-icons/sunny-icon.png";
+  } else if (weatherConditions["cloudy"].includes(condition.toLowerCase())) {
+    return "weather-icons/cloudy-icon.png";
+  } else if (weatherConditions["suncloud"].includes(condition.toLowerCase())) {
+    return "weather-icons/partly-cloudy-icon.png";
+  } else if (weatherConditions["rain"].includes(condition.toLowerCase())) {
+    return "weather-icons/rain-icon.png";
+  } else if (weatherConditions["snow"].includes(condition.toLowerCase())) {
+    return "weather-icons/snow-icon.png";
+  } else if (weatherConditions["clear"].includes(condition.toLowerCase())) {
+    return "weather-icons/night-clear-icon.png";
+  } else {
+    return "weather-icons/question-mark-icon.png";
+  }
+};
 
 
 const forecastData = (result) => {
@@ -37,122 +56,146 @@ const forecastData = (result) => {
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[0]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[0].temperature[0]["_"]  + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[0].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[0].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[1]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[1].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[1].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[1].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[2]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[2].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[2].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[2].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[3]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[3].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[3].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[3].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[4]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[4].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[4].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[4].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[5]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[5].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[5].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[5].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[6]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[6].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[6].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[6].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[7]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[7].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[7].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[7].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[8]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[8].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[8].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[8].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[9]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[9].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[9].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[9].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[10]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[10].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[10].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[10].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[11]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[11].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[11].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[11].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[12]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[12].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[12].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[12].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[13]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[13].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[13].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[13].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[14]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[14].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[14].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[14].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[15]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[15].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[15].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[15].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[16]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[16].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[16].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[16].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[17]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[17].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[17].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[17].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[18]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[18].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[18].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[18].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[19]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[19].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[19].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[19].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[20]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[20].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[20].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[20].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[21]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[21].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[21].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[21].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[22]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[22].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[22].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[22].condition[0])
       },
       {
         time: date.format(date.addHours(date.parse(result.siteData.hourlyForecastGroup[0].hourlyForecast[23]["$"].dateTimeUTC, "YYYYMMDDHHmmss", true), result.siteData.hourlyForecastGroup[0].dateTime[1]["$"].UTCOffset), "hA", true),
         temp: result.siteData.hourlyForecastGroup[0].hourlyForecast[23].temperature[0]["_"] + "°C",
-        cond: "cond",
+        cond: result.siteData.hourlyForecastGroup[0].hourlyForecast[23].condition,
+        icon: iconCondition(result.siteData.hourlyForecastGroup[0].hourlyForecast[23].condition[0])
       },
     ],
     // Summaries for icons
@@ -199,4 +242,4 @@ const forecastData = (result) => {
 // console.log("Night: " + forecast.overmorrowNightConditions);
 // console.log("Night: " + forecast.overmorrowNightCondition);
 
-module.exports = forecastData;
+module.exports = { forecastData, iconCondition };

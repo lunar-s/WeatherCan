@@ -1,31 +1,8 @@
 const https = require("https");
 const cityFinder = require("../controller/cityFinder");
 const parseString = require("xml2js").parseString;
-const weatherConditions = require("./conditions");
-const forecastData = require("../controller/forecast");
+const { forecastData, iconCondition } = require("../controller/forecast");
 
-const unitConvert = (temperature) => {
-  let temperatureF = temperature * 1.8 + 32;
-  return temperatureF.toFixed(1);
-};
-
-const iconCondition = (currentConditions) => {
-  if (weatherConditions["sunny"].includes(currentConditions.toLowerCase())) {
-    return "weather-icons/sunny-icon.png";
-  } else if (weatherConditions["cloudy"].includes(currentConditions.toLowerCase())) {
-    return "weather-icons/cloudy-icon.png";
-  } else if (weatherConditions["suncloud"].includes(currentConditions.toLowerCase())) {
-    return "weather-icons/partly-cloudy-icon.png";
-  } else if (weatherConditions["rain"].includes(currentConditions.toLowerCase())) {
-    return "weather-icons/rain-icon.png";
-  } else if (weatherConditions["snow"].includes(currentConditions.toLowerCase())) {
-    return "weather-icons/snow-icon.png";
-  } else if (weatherConditions["clear"].includes(currentConditions.toLowerCase())) {
-    return "weather-icons/night-clear-icon.png";
-  } else {
-    return "weather-icons/question-mark-icon.png";
-  }
-};
 
 const temperatureExtract = (req, res) => {
   let cityToFind = req.query.city
@@ -98,4 +75,4 @@ const temperatureExtract = (req, res) => {
   }
 };
 
-module.exports = temperatureExtract;
+module.exports = { temperatureExtract, iconCondition }
