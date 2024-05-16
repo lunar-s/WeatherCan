@@ -7,7 +7,7 @@ const parseString = require("xml2js").parseString;
 var cityFinder = require('../controller/cityFinder');
 
 describe("XML to JSON", function() {
-    it("should download XML and convert to object", function() {
+    it("should download XML and convert to object", function(done) {
         server(app);
         let cityToFind = "montreal"
         .toLowerCase()
@@ -15,24 +15,22 @@ describe("XML to JSON", function() {
         .replace(/[\u0300-\u036f]/g, "")
         .replace(" ", "")
         .replace(".", "");
-      const city = cityFinder(cityToFind);
+        const city = cityFinder(cityToFind);
     
-      if (city) {
-        const province = city.properties["Province Codes"];
-        const cityCode = city.properties.Codes;
-        const url = `https://dd.weather.gc.ca/citypage_weather/xml/${province}/${cityCode}_e.xml`;
-    
-        https.get(url, (xml) => {
-          let data = "";
-          xml.on("data", (chunk) => {
-            data += chunk;
-          });
-          xml.on("end", () => {
-            parseString(data, (err, result) => {
-              if (err) throw err;
-        assert.notEqual(result, xml);
-        // console.log(xml);
-        // console.log(result);
-
+        if (city) {
+            const province = city.properties["Province Codes"];
+            const cityCode = city.properties.Codes;
+            const url = `https://dd.weather.gc.ca/citypage_weather/xml/${province}/${cityCode}_e.xml`;
+        
+            https.get(url, (xml) => {
+              let data = "";
+              xml.on("data", (chunk) => {
+                data += chunk;
+              });
+              xml.on("end", () => {
+                parseString(data, (err, result) => {
+                  if (err) throw err;
+        result.should.be.an('object');
+        done();
             })})})}}
 )})
