@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) {
   body {
     background-image: url(backgroundclouds.jpg);
-    height: 100%;
+    height: auto;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
 @media only screen and (min-width: 600px) {
   body {
     background-image: url(backgroundclouds.jpg);
-    height: 100%;
+    height: auto;
     width: auto;
 
     background-position: center;
@@ -73,7 +73,7 @@ hr {
 /* fortnite */
 
 .bothside {
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 0px;
   height: 82%;
   width: 100%;
@@ -135,6 +135,7 @@ hr {
 #tonight-conditions {
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 
 #tonight-conditions p {
@@ -170,6 +171,7 @@ hr {
 .col{
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 div.container.text-center {
