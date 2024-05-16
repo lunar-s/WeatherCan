@@ -21,15 +21,10 @@ describe("Forecast Data", function() {
     });
 });
 
-// describe("Index", function() {
-//     it("should pass", function(done){
-//         server(app)
-//         .get('/')
-//         .end(function(err, res){
-//             if(err) done(err);
-//             should.equal(res.status, 200);
-            
-//             done();
-//         });
-//     });
-// });
+describe("Unit Conversion", function() {
+    it("should convert 25 celsius to 77 fahrenheit", function() {
+        var temp = 25;
+        var result = (temp * 1.8 + 32).toFixed();
+        should.equal(result, '77');
+    })
+})
