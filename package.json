@@ -4,7 +4,7 @@
   "description": "A privacy-respecting weather app",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc --reporter=html --reporter=text mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
     "mocha": "^10.4.0",
     "supertest": "^7.0.0",
     "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "nyc": "^15.1.0"
   }
 }
