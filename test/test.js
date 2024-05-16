@@ -1,6 +1,6 @@
-var server = require("supertest");
-var should = require("chai").should();
-var app = require("../index");
+const server = require("supertest");
+const should = require("chai").should();
+const app = require("../index");
 
 describe("Index", function () {
   it("should pass", function (done) {
@@ -33,6 +33,20 @@ describe("Valid search", function () {
       .end(function (err, res) {
         if (err) done(err);
         should.equal(res.status, 200);
+        done();
+      });
+  });
+});
+
+describe("Entering unsupported city", function () {
+  it("should show 404 page", function (done) {
+    server(app)
+      .get("/forecast?city=vancouvar")
+      .end(function (err, res) {
+        if (err) done(err);
+        let value = res.text.includes("Error 404");
+        should.equal(res.status, 200);
+        should.equal(value, true);
         done();
       });
   });
