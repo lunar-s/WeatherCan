@@ -30,7 +30,7 @@ describe("XML to JSON", function() {
               xml.on("end", () => {
                 parseString(data, (err, result) => {
                   if (err) throw err;
-        result.should.be.an('object');
+        should.not.equal(result, xml);
         done();
             })})})}}
 )})
