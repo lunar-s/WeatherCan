@@ -28,10 +28,10 @@ const temperatureExtract = (req, res) => {
       xml.on("end", () => {
         parseString(data, (err, result) => {
           if (err) throw err;
-          // STOP COMMENT HERE
-          // UNCOMMENT LINE BELOW FOR TESTING
-          // const result = require("../controller/test_data.json");
-          const forecast = forecastData(result);
+    // STOP COMMENT HERE
+    // UNCOMMENT LINE BELOW FOR TESTING
+    // const result = require("../controller/test_data.json");
+    const forecast = forecastData(result);
 
           res.render("city", {
             city: cityName,
