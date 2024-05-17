@@ -187,3 +187,16 @@ div.container.text-center {
 div.form-check.form-switch {
   align-content: center;
 }
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+tbody.hourly-conditions td {
+  height: fit-content;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 16.6666666667%;
+}
+
