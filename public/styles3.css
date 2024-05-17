@@ -193,10 +193,50 @@ table {
   width: 100%;
 }
 
-tbody.hourly-conditions td {
+
+tbody.hourly-conditions td { /* this adds overflow to hourly conditions */
   height: fit-content;
   overflow: hidden;
   white-space: nowrap;
   width: 16.6666666667%;
 }
 
+
+/* everything underneath this comment adds scuffed scroll on hover */
+
+/* .condition-scroll a{
+  color: white;
+  text-decoration:none;
+  margin-top: 0em;
+  text-align: center;
+  display:inline-block; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.condition-scroll, .condition-scroll a{
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 0.5s;     
+  
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.condition-scroll{
+  overflow: hidden;
+}
+
+.condition-scroll a:hover{
+  text-decoration: none;
+}
+
+.condition-scroll a{
+  margin-left: 0em;   
+}
+
+.condition-scroll:hover a{
+  margin-left: -20%;
+} */
