@@ -1,16 +1,21 @@
-var server = require("supertest");
-var should = require("chai").should();
-var app = require("../cities");
-const cheerio = require('cheerio');
+const { expect } = require('chai');
+const validateCityCode = require('../validator');
 
-describe("cities", function () {
-    it("should pass", function (done) {
-      server(app)
-        .get("/")
-        .end(function (err, res) {
-          if (err) done(err);
-          console.log(res);
-          done();
-        });
-    });
+describe('validateCityCode', function() {
+  it('should return true for valid city code', function() {
+    expect(validateCityCode('Athabasca', 's0000001')).to.be.true;
   });
+
+  it('should return false for invalid city code', function() {
+    expect(validateCityCode('Athabasca', 's0000002')).to.be.false;
+    expect(validateCityCode('Vancouver', 's0000001')).to.be.false;
+  });
+
+  it('should return false for non-existent city', function() {
+    expect(validateCityCode('NonExistentCity', 's0000001')).to.be.false;
+  });
+
+  it('should return false for invalid code format', function() {
+    expect(validateCityCode('Vancouver', 'VANCOUVER')).to.be.false;
+  });
+});
