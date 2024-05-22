@@ -35,14 +35,16 @@
         >
       </div>
       <% } else{ %> <% } %>
-      <input
-        class="form-control me-2"
-        type="search"
-        name="city"
-        placeholder="Enter a Canadian city..."
-        required
-        aria-label="Search"
-      />
+      <div class="autocomplete">
+        <input
+          id="myInput"
+          type="text"
+          name="city"
+          placeholder="Enter a Canadian city..."
+          required
+          class="form-control"
+        />
+      </div>
       <button class="btn btn-outline-primary" type="submit">Search</button>
     </form>
   </div>
