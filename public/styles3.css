@@ -187,3 +187,13 @@ div.container.text-center {
 div.form-check.form-switch {
   align-content: center;
 }
+
+.cityListContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.cityList {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,108 @@
+<div class="cityListContainer">
+    <div class="cityList">
+        <h3>Alberta</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "AB") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>British Columbia</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "BC") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>Manitoba</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "MB") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>New Brunswick</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "NB") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>Newfoundland and Labrador</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "NL") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>Northwest Territories</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "NT") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>Nova Scotia</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "NS") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+</div>
+<div class="cityListContainer">
+    <div class="cityList">
+        <h3>Nunavut</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "NU") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>Ontario</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "ON") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>Prince Edward Island</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "PE") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>Quebec</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "QC") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>Saskatchewan</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "SK") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+    <div class="cityList">
+        <h3>Yukon</h3>
+        <% cities.forEach((city) => { %>
+            <% if(city.properties["Province Codes"] == "YT") { %>
+                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+            <% }; %>
+        <% }); %>
+    </div>
+</div>
