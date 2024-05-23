@@ -1,0 +1,23 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Droplet Deployment CD
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy-to-digital-ocean-droplet:
+    runs-on: ubuntu-latest
+    name: Deploy Website
+    steps:
+    - name: Checkout master
+      uses: actions/checkout@main
+    - name: Pull from GitHub
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.droplet_host }}
+        username: ${{ secrets.droplet_user }}
+        password: ${{ secrets.droplet_password }}
+        script: cd ~/WeatherOrNot && git pull && npm ci && sudo systemctl restart weather-app
