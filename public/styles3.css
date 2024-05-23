@@ -190,7 +190,7 @@ div.form-check.form-switch {
 
 .cityListContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .cityList {
@@ -203,4 +203,45 @@ div.form-check.form-switch {
   flex-direction: column;
   justify-content: center;
   margin-right: 8px;
+}
+
+.cityContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.cityContainer a {
+  border: 1px solid black;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.province {
+  text-align: center;
+}
+
+.provinceNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#topButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+
+#topButton {
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
 }

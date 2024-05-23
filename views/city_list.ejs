@@ -1,108 +1,155 @@
+<div id="top">
+    <ul class="provinceNav">
+        <li><a href="#AB">AB</a></li>
+        <li><a href="#BC">BC</a></li>
+        <li><a href="#MB">MB</a></li>
+        <li><a href="#NB">NB</a></li>
+        <li><a href="#NL">NL</a></li>
+        <li><a href="#NT">NT</a></li>
+        <li><a href="#NS">NS</a></li>
+        <li><a href="#NU">NU</a></li>
+        <li><a href="#ON">ON</a></li>
+        <li><a href="#PE">PE</a></li>
+        <li><a href="#QC">QC</a></li>
+        <li><a href="#SK">SK</a></li>
+        <li><a href="#YT">YT</a></li>
+    </ul>
+</div>
+
 <div class="cityListContainer">
     <div class="cityList">
-        <h3>Alberta</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "AB") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="AB" class="province">Alberta</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "AB") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>British Columbia</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "BC") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="BC" class="province">British Columbia</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "BC") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>Manitoba</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "MB") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="MB" class="province">Manitoba</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "MB") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>New Brunswick</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "NB") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="NB" class="province">New Brunswick</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "NB") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>Newfoundland and Labrador</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "NL") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="NL" class="province">Newfoundland and Labrador</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "NL") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>Northwest Territories</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "NT") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="NT" class="province">Northwest Territories</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "NT") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>Nova Scotia</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "NS") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="NS" class="province">Nova Scotia</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "NS") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
 </div>
 <div class="cityListContainer">
     <div class="cityList">
-        <h3>Nunavut</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "NU") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="NU" class="province">Nunavut</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "NU") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>Ontario</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "ON") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="ON" class="province">Ontario</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "ON") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>Prince Edward Island</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "PE") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="PE" class="province">Prince Edward Island</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "PE") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>Quebec</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "QC") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="QC" class="province">Quebec</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "QC") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>Saskatchewan</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "SK") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="SK" class="province">Saskatchewan</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "SK") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
     </div>
     <div class="cityList">
-        <h3>Yukon</h3>
-        <% cities.forEach((city) => { %>
-            <% if(city.properties["Province Codes"] == "YT") { %>
-                <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
-            <% }; %>
-        <% }); %>
+        <h3 id="YT" class="province">Yukon</h3>
+        <div class="cityContainer">
+            <% cities.forEach((city) => { %>
+                <% if(city.properties["Province Codes"] == "YT") { %>
+                    <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                <% }; %>
+            <% }); %>
+        </div>
+    </div>
+    <div id="topButtonContainer">
+        <a id="topButton" href="#top">Back to top</a>
     </div>
 </div>
