@@ -197,3 +197,10 @@ div.form-check.form-switch {
   display: flex;
   flex-direction: column;
 }
+
+#nav-browse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 8px;
+}

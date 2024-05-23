@@ -2,6 +2,9 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/">WeatherOrNot</a>
     <form class="d-flex" role="search" action="/forecast" method="get">
+      <div id="nav-browse">
+        <a href="city_list">Browse all cities</a>
+      </div>
       <% if(temperature == null) { %> <% } else if (temperature.includes("F")) {
       %>
       <div class="form-check form-switch">
