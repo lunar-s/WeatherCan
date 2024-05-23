@@ -20,4 +20,4 @@ jobs:
         host: ${{ secrets.droplet_host }}
         username: ${{ secrets.droplet_user }}
         password: ${{ secrets.droplet_password }}
-        script: cd /var/www/WeatherOrNot && git pull && sudo systemctl restart weather-app
+        script: cd ~/WeatherOrNot && git pull && sudo systemctl restart weather-app
