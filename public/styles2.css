@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
   body {
-    background-image: url(WeatherOrNotHomepage3.jpg);
+    background-image: url(WeatherOrNotHomepage4.jpg);
     height: 100%;
 
     background-position: center;
@@ -11,7 +11,7 @@
 
 @media only screen and (min-width: 600px) {
   body {
-    background-image: url(WeatherOrNotHomepage3.jpg);
+    background-image: url(WeatherOrNotHomepage4.jpg);
     height: 100%;
 
     background-position: center;
@@ -66,7 +66,7 @@ body {
 
 .text {
   background-color: white;
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 4vw;
   font-weight: bold;
   margin: 0 auto;
