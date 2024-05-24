@@ -17,7 +17,7 @@
                 <div class="cityContainer">
                     <% cities.forEach((city) => { %>
                         <% if(city.properties["Province Codes"] == "AB") { %>
-                            <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                            <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                         <% }; %>
                     <% }); %>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="cityContainer">
                     <% cities.forEach((city) => { %>
                         <% if(city.properties["Province Codes"] == "BC") { %>
-                            <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                            <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                         <% }; %>
                     <% }); %>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="cityContainer">
                     <% cities.forEach((city) => { %>
                         <% if(city.properties["Province Codes"] == "MB") { %>
-                            <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                            <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                         <% }; %>
                     <% }); %>
                 </div>
@@ -74,7 +74,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "NB") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
@@ -93,7 +93,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "NL") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
@@ -112,7 +112,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "NT") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
@@ -131,7 +131,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "NS") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
@@ -150,7 +150,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "NU") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
@@ -169,7 +169,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "ON") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
@@ -188,7 +188,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "PE") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
@@ -207,7 +207,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "QC") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
@@ -226,7 +226,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "SK") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
@@ -245,7 +245,7 @@
                   <div class="cityContainer">
                       <% cities.forEach((city) => { %>
                           <% if(city.properties["Province Codes"] == "YT") { %>
-                              <a href="/forecast?city=<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
+                              <a href="/forecast?city=<%= city.properties['English Names'] %>" title="<%= city.properties['English Names'] %>"><%= city.properties["English Names"] %></a>
                           <% }; %>
                       <% }); %>
                   </div>
