@@ -187,3 +187,77 @@ div.container.text-center {
 div.form-check.form-switch {
   align-content: center;
 }
+
+.cityListContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 55px;
+}
+
+.cityList {
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-browse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.cityContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.cityContainer a {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  border-radius: 1cm;
+  margin: 6px;
+  border: solid #0d6efd 2px;
+  background-color: #cfe2ff;
+  color: black;
+}
+
+.province {
+  text-align: center;
+}
+
+.provinceNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#topButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+
+#topButton {
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.accordion-item {
+  background-color: #ffffff;
+  border: solid #0d6efd 2px;
+}
+
+.accordion-button {
+  background-color: #cfe2ff;
+}

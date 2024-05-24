@@ -2,6 +2,9 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/">WeatherOrNot</a>
     <form class="d-flex" role="search" action="/forecast" method="get">
+      <div id="nav-browse">
+        <a href="city_list">Browse all cities</a>
+      </div>
       <% if(temperature == null) { %> <% } else if (temperature.includes("F")) {
       %>
       <div class="form-check form-switch">
@@ -35,14 +38,16 @@
         >
       </div>
       <% } else{ %> <% } %>
-      <input
-        class="form-control me-2"
-        type="search"
-        name="city"
-        placeholder="Enter a Canadian city..."
-        required
-        aria-label="Search"
-      />
+      <div class="autocomplete">
+        <input
+          id="myInput"
+          type="text"
+          name="city"
+          placeholder="Enter a Canadian city..."
+          required
+          class="form-control"
+        />
+      </div>
       <button class="btn btn-outline-primary" type="submit">Search</button>
     </form>
   </div>

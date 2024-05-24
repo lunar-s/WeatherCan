@@ -6,14 +6,16 @@
     <title>WeatherOrNot</title>
     <link href="styles.css" rel="stylesheet" />
     <link href="styles2.css" rel="stylesheet" />
+    <link href="autocomplete.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="cloud.png" />
+    <script src="autocomplete.js" defer></script>
   </head>
 
   <body>
     <div class="image-container">
       <div class="text">WeatherOrNot</div>
     </div>
-    <form action="/forecast" method="get">
+    <form action="/forecast" method="get" autocomplete="off">
       <div class="form-check form-switch" hidden>
         <input
           class="form-check-input"
@@ -27,14 +29,23 @@
           >Celsius / Fahrenheit</label
         >
       </div>
-      <input
-        type="text"
-        name="city"
-        placeholder="Enter a Canadian city..."
-        required
-        class="form-control"
-      />
-      <button class="button-85" type="submit">Search</button>
+      <div class="autocomplete">
+        <input
+          id="myInput"
+          type="text"
+          name="city"
+          placeholder="Enter a Canadian city..."
+          required
+          class="form-control"
+        />
+      </div>
+      <div>
+        <a href="city_list" id="all-cities" class="btn btn-light">All cities</a>
+        <button class="button-85" type="submit">Search</button>
+      </div>
     </form>
+  <script>
+    autocomplete(document.getElementById("myInput"), countries);
+  </script>
   </body>
 </html>
