@@ -17,7 +17,9 @@ const weatherConditions = {
     "mostly cloudy",
     "cloudy periods",
     "mainly cloudy",
+    "overcast",
   ],
+  thunder: ["thunder", "thunderstorm", "thundershowers"],
   rain: [
     "light rain shower",
     "light rain shower and flurries",
@@ -64,7 +66,11 @@ const weatherConditions = {
     "chance of flurries",
     "periods of snow",
   ],
-  clear: ["clear", "mainly clear"],
+  rainsnow: [
+    "chance of rain showers or flurries",
+    "periods of snow mixed with rain",
+  ],
+  nightclear: ["clear", "mainly clear", "clearing",],
 };
 
 module.exports = weatherConditions;

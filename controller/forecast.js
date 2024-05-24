@@ -2,22 +2,23 @@ const date = require('date-and-time');
 const weatherConditions = require("./conditions");
 
 const iconCondition = (condition) => {
-  if (weatherConditions["sunny"].includes(condition.toLowerCase())) {
-    return "weather-icons/sunny-icon.png";
-  } else if (weatherConditions["cloudy"].includes(condition.toLowerCase())) {
-    return "weather-icons/cloudy-icon.png";
-  } else if (weatherConditions["suncloud"].includes(condition.toLowerCase())) {
-    return "weather-icons/partly-cloudy-icon.png";
-  } else if (weatherConditions["rain"].includes(condition.toLowerCase())) {
-    return "weather-icons/rain-icon.png";
-  } else if (weatherConditions["snow"].includes(condition.toLowerCase())) {
-    return "weather-icons/snow-icon.png";
-  } else if (weatherConditions["clear"].includes(condition.toLowerCase())) {
-    return "weather-icons/night-clear-icon.png";
-  } else {
-    return "weather-icons/question-mark-icon.png";
+  console.log(condition)
+  for(let weatherType in weatherConditions){
+    const conditionsArray = weatherConditions[weatherType];
+    for(let i = 0; i < conditionsArray.length; i++){
+      if(condition.toLowerCase().includes(conditionsArray[i].toLowerCase())){
+        return `weather-icons/${weatherType}-icon.png`;
+      }
+    }
+  }
+  
+  // Data contains no condition
+  if (!condition) {
+    return "";
   }
 };
+
+
 
 
 const forecastData = (result) => {
