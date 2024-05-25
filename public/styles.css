@@ -5943,6 +5943,7 @@ fieldset:disabled .btn {
 }
 .carousel {
   position: relative;
+  padding-bottom: 10px
 }
 .carousel.pointer-event {
   touch-action: pan-y;
@@ -6072,14 +6073,14 @@ fieldset:disabled .btn {
   justify-content: center;
   padding: 0;
   margin-right: 15%;
-  margin-bottom: 1rem;
+  margin-top: 7px;
   margin-left: 15%;
 }
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
   flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
+  width: 10px;
+  height: 10px;
   padding: 0;
   margin-right: 3px;
   margin-left: 3px;
@@ -6090,8 +6091,9 @@ fieldset:disabled .btn {
   border: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  opacity: 0.5;
-  transition: opacity 0.6s ease;
+  opacity: .5;
+  transition: opacity .6s ease;
+  border-radius: 50%;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-indicators [data-bs-target] {
