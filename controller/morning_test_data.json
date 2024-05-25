@@ -1,0 +1,1536 @@
+{
+  "siteData": {
+    "$": {
+      "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+      "xsi:noNamespaceSchemaLocation": "https://dd.weather.gc.ca/citypage_weather/schema/site.xsd"
+    },
+    "license": ["https://dd.weather.gc.ca/doc/LICENCE_GENERAL.txt"],
+    "dateTime": [
+      {
+        "$": { "name": "xmlCreation", "zone": "UTC", "UTCOffset": "0" },
+        "year": ["2024"],
+        "month": [{ "_": "05", "$": { "name": "May" } }],
+        "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+        "hour": ["18"],
+        "minute": ["04"],
+        "timeStamp": ["20240525180421"],
+        "textSummary": ["Saturday May 25, 2024 at 18:04 UTC"]
+      },
+      {
+        "$": { "name": "xmlCreation", "zone": "PDT", "UTCOffset": "-7" },
+        "year": ["2024"],
+        "month": [{ "_": "05", "$": { "name": "May" } }],
+        "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+        "hour": ["11"],
+        "minute": ["04"],
+        "timeStamp": ["20240525110421"],
+        "textSummary": ["Saturday May 25, 2024 at 11:04 PDT"]
+      }
+    ],
+    "location": [
+      {
+        "continent": ["North America"],
+        "country": [{ "_": "Canada", "$": { "code": "ca" } }],
+        "province": [{ "_": "British Columbia", "$": { "code": "bc" } }],
+        "name": [
+          {
+            "_": "Vancouver",
+            "$": { "code": "s0000141", "lat": "49.24N", "lon": "123.12W" }
+          }
+        ],
+        "region": [
+          "Metro Vancouver - central including the City of Vancouver Burnaby and New Westminster"
+        ]
+      }
+    ],
+    "warnings": [""],
+    "currentConditions": [
+      {
+        "station": [
+          {
+            "_": "Vancouver Int'l Airport",
+            "$": { "code": "yvr", "lat": "49.20N", "lon": "123.18W" }
+          }
+        ],
+        "dateTime": [
+          {
+            "$": { "name": "observation", "zone": "UTC", "UTCOffset": "0" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+            "hour": ["18"],
+            "minute": ["00"],
+            "timeStamp": ["20240525180000"],
+            "textSummary": ["Saturday May 25, 2024 at 18:00 UTC"]
+          },
+          {
+            "$": { "name": "observation", "zone": "PDT", "UTCOffset": "-7" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+            "hour": ["11"],
+            "minute": ["00"],
+            "timeStamp": ["20240525110000"],
+            "textSummary": ["Saturday May 25, 2024 at 11:00 PDT"]
+          }
+        ],
+        "condition": ["Mostly Cloudy"],
+        "iconCode": [{ "_": "03", "$": { "format": "gif" } }],
+        "temperature": [
+          { "_": "10.8", "$": { "unitType": "metric", "units": "C" } }
+        ],
+        "dewpoint": [
+          { "_": "5.2", "$": { "unitType": "metric", "units": "C" } }
+        ],
+        "pressure": [
+          {
+            "_": "101.2",
+            "$": {
+              "unitType": "metric",
+              "units": "kPa",
+              "change": "0.22",
+              "tendency": "rising"
+            }
+          }
+        ],
+        "visibility": [
+          { "_": "32.2", "$": { "unitType": "metric", "units": "km" } }
+        ],
+        "relativeHumidity": [{ "_": "68", "$": { "units": "%" } }],
+        "wind": [
+          {
+            "speed": [
+              { "_": "21", "$": { "unitType": "metric", "units": "km/h" } }
+            ],
+            "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }],
+            "direction": ["WSW"],
+            "bearing": [{ "_": "254.0", "$": { "units": "degrees" } }]
+          }
+        ]
+      }
+    ],
+    "forecastGroup": [
+      {
+        "dateTime": [
+          {
+            "$": { "name": "forecastIssue", "zone": "UTC", "UTCOffset": "0" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+            "hour": ["18"],
+            "minute": ["00"],
+            "timeStamp": ["20240525180000"],
+            "textSummary": ["Saturday May 25, 2024 at 18:00 UTC"]
+          },
+          {
+            "$": { "name": "forecastIssue", "zone": "PDT", "UTCOffset": "-7" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+            "hour": ["11"],
+            "minute": ["00"],
+            "timeStamp": ["20240525110000"],
+            "textSummary": ["Saturday May 25, 2024 at 11:00 PDT"]
+          }
+        ],
+        "regionalNormals": [
+          {
+            "textSummary": ["Low 10. High 19."],
+            "temperature": [
+              {
+                "_": "19",
+                "$": { "unitType": "metric", "units": "C", "class": "high" }
+              },
+              {
+                "_": "10",
+                "$": { "unitType": "metric", "units": "C", "class": "low" }
+              }
+            ]
+          }
+        ],
+        "forecast": [
+          {
+            "period": [
+              { "_": "Saturday", "$": { "textForecastName": "Today" } }
+            ],
+            "textSummary": [
+              "Mainly cloudy. 30 percent chance of showers early this afternoon. Wind west 20 km/h. High 15. UV index 5 or moderate."
+            ],
+            "cloudPrecip": [
+              {
+                "textSummary": [
+                  "Mainly cloudy. 30 percent chance of showers early this afternoon."
+                ]
+              }
+            ],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "06", "$": { "format": "gif" } }],
+                "pop": [{ "_": "30", "$": { "units": "%" } }],
+                "textSummary": ["Chance of showers"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["High 15."],
+                "temperature": [
+                  {
+                    "_": "15",
+                    "$": { "unitType": "metric", "units": "C", "class": "high" }
+                  }
+                ]
+              }
+            ],
+            "winds": [
+              {
+                "textSummary": ["Wind west 20 km/h."],
+                "wind": [
+                  {
+                    "$": { "index": "1", "rank": "major" },
+                    "speed": [
+                      {
+                        "_": "20",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "gust": [
+                      {
+                        "_": "00",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "direction": ["W"],
+                    "bearing": [{ "_": "27", "$": { "units": "degrees" } }]
+                  },
+                  {
+                    "$": { "index": "2", "rank": "major" },
+                    "speed": [
+                      {
+                        "_": "05",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "gust": [
+                      {
+                        "_": "00",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "direction": ["VR"],
+                    "bearing": [{ "_": "99", "$": { "units": "degrees" } }]
+                  }
+                ]
+              }
+            ],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "18", "end": "21" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "uv": [
+              {
+                "$": { "category": "moderate" },
+                "index": ["5"],
+                "textSummary": ["UV index 5 or moderate."]
+              }
+            ],
+            "relativeHumidity": [{ "_": "60", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              { "_": "Saturday night", "$": { "textForecastName": "Tonight" } }
+            ],
+            "textSummary": [
+              "Mainly cloudy. 30 percent chance of rain overnight. Low 9."
+            ],
+            "cloudPrecip": [
+              {
+                "textSummary": [
+                  "Mainly cloudy. 30 percent chance of rain overnight."
+                ]
+              }
+            ],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "_": "30", "$": { "units": "%" } }],
+                "textSummary": ["Periods of rain"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["Low 9."],
+                "temperature": [
+                  {
+                    "_": "9",
+                    "$": { "unitType": "metric", "units": "C", "class": "low" }
+                  }
+                ]
+              }
+            ],
+            "winds": [
+              {
+                "wind": [
+                  {
+                    "$": { "index": "1", "rank": "major" },
+                    "speed": [
+                      {
+                        "_": "05",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "gust": [
+                      {
+                        "_": "00",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "direction": ["VR"],
+                    "bearing": [{ "_": "99", "$": { "units": "degrees" } }]
+                  },
+                  {
+                    "$": { "index": "2", "rank": "major" },
+                    "speed": [
+                      {
+                        "_": "10",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "gust": [
+                      {
+                        "_": "00",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "direction": ["S"],
+                    "bearing": [{ "_": "18", "$": { "units": "degrees" } }]
+                  }
+                ]
+              }
+            ],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "34", "end": "37" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "85", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              { "_": "Sunday", "$": { "textForecastName": "Sunday" } }
+            ],
+            "textSummary": [
+              "Periods of rain ending in the afternoon then cloudy with 40 percent chance of showers. Wind becoming southeast 20 km/h late in the morning. High 13. UV index 1 or low."
+            ],
+            "cloudPrecip": [
+              {
+                "textSummary": [
+                  "Periods of rain ending in the afternoon then cloudy with 40 percent chance of showers."
+                ]
+              }
+            ],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "$": { "units": "%" } }],
+                "textSummary": ["Periods of rain"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["High 13."],
+                "temperature": [
+                  {
+                    "_": "13",
+                    "$": { "unitType": "metric", "units": "C", "class": "high" }
+                  }
+                ]
+              }
+            ],
+            "winds": [
+              {
+                "textSummary": [
+                  "Wind becoming southeast 20 km/h late in the morning."
+                ],
+                "wind": [
+                  {
+                    "$": { "index": "1", "rank": "minor" },
+                    "speed": [
+                      {
+                        "_": "10",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "gust": [
+                      {
+                        "_": "00",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "direction": ["S"],
+                    "bearing": [{ "_": "18", "$": { "units": "degrees" } }]
+                  },
+                  {
+                    "$": { "index": "2", "rank": "major" },
+                    "speed": [
+                      {
+                        "_": "15",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "gust": [
+                      {
+                        "_": "00",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "direction": ["SE"],
+                    "bearing": [{ "_": "14", "$": { "units": "degrees" } }]
+                  },
+                  {
+                    "$": { "index": "3", "rank": "major" },
+                    "speed": [
+                      {
+                        "_": "20",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "gust": [
+                      {
+                        "_": "00",
+                        "$": { "unitType": "metric", "units": "km/h" }
+                      }
+                    ],
+                    "direction": ["SE"],
+                    "bearing": [{ "_": "14", "$": { "units": "degrees" } }]
+                  }
+                ]
+              }
+            ],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "37", "end": "49" } }
+                ],
+                "accumulation": [
+                  {
+                    "name": ["rain"],
+                    "amount": [
+                      {
+                        "_": "10",
+                        "$": { "unitType": "metric", "units": "mm" }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "uv": [
+              {
+                "$": { "category": "low" },
+                "index": ["1"],
+                "textSummary": ["UV index 1 or low."]
+              }
+            ],
+            "relativeHumidity": [{ "_": "75", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              {
+                "_": "Sunday night",
+                "$": { "textForecastName": "Sunday night" }
+              }
+            ],
+            "textSummary": [
+              "Cloudy with 40 percent chance of showers. Low 10."
+            ],
+            "cloudPrecip": [
+              { "textSummary": ["Cloudy with 40 percent chance of showers."] }
+            ],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "_": "40", "$": { "units": "%" } }],
+                "textSummary": ["Chance of showers"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["Low 10."],
+                "temperature": [
+                  {
+                    "_": "10",
+                    "$": { "unitType": "metric", "units": "C", "class": "low" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "49", "end": "61" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "85", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              { "_": "Monday", "$": { "textForecastName": "Monday" } }
+            ],
+            "textSummary": [
+              "Cloudy with 30 percent chance of showers. High 15."
+            ],
+            "cloudPrecip": [
+              { "textSummary": ["Cloudy with 30 percent chance of showers."] }
+            ],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "_": "30", "$": { "units": "%" } }],
+                "textSummary": ["Chance of showers"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["High 15."],
+                "temperature": [
+                  {
+                    "_": "15",
+                    "$": { "unitType": "metric", "units": "C", "class": "high" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "61", "end": "73" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "65", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              {
+                "_": "Monday night",
+                "$": { "textForecastName": "Monday night" }
+              }
+            ],
+            "textSummary": ["Periods of rain. Low 11."],
+            "cloudPrecip": [{ "textSummary": ["Periods of rain."] }],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "$": { "units": "%" } }],
+                "textSummary": ["Periods of rain"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["Low 11."],
+                "temperature": [
+                  {
+                    "_": "11",
+                    "$": { "unitType": "metric", "units": "C", "class": "low" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "83", "end": "85" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "85", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              { "_": "Tuesday", "$": { "textForecastName": "Tuesday" } }
+            ],
+            "textSummary": ["Rain. High 14."],
+            "cloudPrecip": [{ "textSummary": ["Rain."] }],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "$": { "units": "%" } }],
+                "textSummary": ["Rain"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["High 14."],
+                "temperature": [
+                  {
+                    "_": "14",
+                    "$": { "unitType": "metric", "units": "C", "class": "high" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "85", "end": "97" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "95", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              {
+                "_": "Tuesday night",
+                "$": { "textForecastName": "Tuesday night" }
+              }
+            ],
+            "textSummary": ["Showers. Low 10."],
+            "cloudPrecip": [{ "textSummary": ["Showers."] }],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "$": { "units": "%" } }],
+                "textSummary": ["Showers"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["Low 10."],
+                "temperature": [
+                  {
+                    "_": "10",
+                    "$": { "unitType": "metric", "units": "C", "class": "low" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "97", "end": "108" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "80", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              { "_": "Wednesday", "$": { "textForecastName": "Wednesday" } }
+            ],
+            "textSummary": [
+              "Cloudy with 60 percent chance of showers. High 14."
+            ],
+            "cloudPrecip": [
+              { "textSummary": ["Cloudy with 60 percent chance of showers."] }
+            ],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "_": "60", "$": { "units": "%" } }],
+                "textSummary": ["Chance of showers"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["High 14."],
+                "temperature": [
+                  {
+                    "_": "14",
+                    "$": { "unitType": "metric", "units": "C", "class": "high" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "114", "end": "121" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "70", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              {
+                "_": "Wednesday night",
+                "$": { "textForecastName": "Wednesday night" }
+              }
+            ],
+            "textSummary": ["Cloudy with 60 percent chance of showers. Low 8."],
+            "cloudPrecip": [
+              { "textSummary": ["Cloudy with 60 percent chance of showers."] }
+            ],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "_": "60", "$": { "units": "%" } }],
+                "textSummary": ["Chance of showers"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["Low 8."],
+                "temperature": [
+                  {
+                    "_": "8",
+                    "$": { "unitType": "metric", "units": "C", "class": "low" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "121", "end": "126" } },
+                  { "_": "rain", "$": { "start": "132", "end": "133" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "85", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              { "_": "Thursday", "$": { "textForecastName": "Thursday" } }
+            ],
+            "textSummary": [
+              "Cloudy with 30 percent chance of showers. High 18."
+            ],
+            "cloudPrecip": [
+              { "textSummary": ["Cloudy with 30 percent chance of showers."] }
+            ],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "12", "$": { "format": "gif" } }],
+                "pop": [{ "_": "30", "$": { "units": "%" } }],
+                "textSummary": ["Chance of showers"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["High 18."],
+                "temperature": [
+                  {
+                    "_": "18",
+                    "$": { "unitType": "metric", "units": "C", "class": "high" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [
+                  { "_": "rain", "$": { "start": "133", "end": "144" } }
+                ]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "50", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              {
+                "_": "Thursday night",
+                "$": { "textForecastName": "Thursday night" }
+              }
+            ],
+            "textSummary": ["Cloudy periods. Low 9."],
+            "cloudPrecip": [{ "textSummary": ["Cloudy periods."] }],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "32", "$": { "format": "gif" } }],
+                "pop": [{ "$": { "units": "%" } }],
+                "textSummary": ["Cloudy periods"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["Low 9."],
+                "temperature": [
+                  {
+                    "_": "9",
+                    "$": { "unitType": "metric", "units": "C", "class": "low" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [{ "$": { "start": "", "end": "" } }]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "85", "$": { "units": "%" } }],
+            "humidex": [""]
+          },
+          {
+            "period": [
+              { "_": "Friday", "$": { "textForecastName": "Friday" } }
+            ],
+            "textSummary": ["A mix of sun and cloud. High 20."],
+            "cloudPrecip": [{ "textSummary": ["A mix of sun and cloud."] }],
+            "abbreviatedForecast": [
+              {
+                "iconCode": [{ "_": "02", "$": { "format": "gif" } }],
+                "pop": [{ "$": { "units": "%" } }],
+                "textSummary": ["A mix of sun and cloud"]
+              }
+            ],
+            "temperatures": [
+              {
+                "textSummary": ["High 20."],
+                "temperature": [
+                  {
+                    "_": "20",
+                    "$": { "unitType": "metric", "units": "C", "class": "high" }
+                  }
+                ]
+              }
+            ],
+            "winds": [""],
+            "precipitation": [
+              {
+                "textSummary": [""],
+                "precipType": [{ "$": { "start": "", "end": "" } }]
+              }
+            ],
+            "windChill": [""],
+            "relativeHumidity": [{ "_": "50", "$": { "units": "%" } }],
+            "humidex": [""]
+          }
+        ]
+      }
+    ],
+    "hourlyForecastGroup": [
+      {
+        "dateTime": [
+          {
+            "$": { "name": "forecastIssue", "zone": "UTC", "UTCOffset": "0" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+            "hour": ["18"],
+            "minute": ["00"],
+            "timeStamp": ["20240525180000"],
+            "textSummary": ["Saturday May 25, 2024 at 18:00 UTC"]
+          },
+          {
+            "$": { "name": "forecastIssue", "zone": "PDT", "UTCOffset": "-7" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+            "hour": ["11"],
+            "minute": ["00"],
+            "timeStamp": ["20240525110000"],
+            "textSummary": ["Saturday May 25, 2024 at 11:00 PDT"]
+          }
+        ],
+        "hourlyForecast": [
+          {
+            "$": { "dateTimeUTC": "202405251900" },
+            "condition": ["Chance of showers"],
+            "iconCode": [{ "_": "06", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "13", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "30", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "20", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "W", "$": { "windDirFull": "West" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ],
+            "uv": [{ "index": ["5"] }]
+          },
+          {
+            "$": { "dateTimeUTC": "202405252000" },
+            "condition": ["Chance of showers"],
+            "iconCode": [{ "_": "06", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "13", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "30", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "20", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "W", "$": { "windDirFull": "West" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ],
+            "uv": [{ "index": ["5"] }]
+          },
+          {
+            "$": { "dateTimeUTC": "202405252100" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "03", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "14", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "20", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "W", "$": { "windDirFull": "West" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ],
+            "uv": [{ "index": ["4"] }]
+          },
+          {
+            "$": { "dateTimeUTC": "202405252200" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "03", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "14", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "20", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "W", "$": { "windDirFull": "West" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ],
+            "uv": [{ "index": ["3"] }]
+          },
+          {
+            "$": { "dateTimeUTC": "202405252300" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "03", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "15", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "20", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "W", "$": { "windDirFull": "West" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ],
+            "uv": [{ "index": ["2"] }]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260000" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "03", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "15", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "5", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "VR", "$": { "windDirFull": "Variable direction" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ],
+            "uv": [{ "index": ["1"] }]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260100" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "03", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "14", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "5", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "VR", "$": { "windDirFull": "Variable direction" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260200" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "03", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "14", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "5", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "VR", "$": { "windDirFull": "Variable direction" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260300" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "03", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "13", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "5", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "VR", "$": { "windDirFull": "Variable direction" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260400" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "33", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "12", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "5", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "VR", "$": { "windDirFull": "Variable direction" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260500" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "33", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "12", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "5", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "VR", "$": { "windDirFull": "Variable direction" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260600" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "33", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "11", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "10", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "S", "$": { "windDirFull": "South" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260700" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "33", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "11", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "10", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "S", "$": { "windDirFull": "South" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260800" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "33", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "10", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "10", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "S", "$": { "windDirFull": "South" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405260900" },
+            "condition": ["Mainly cloudy"],
+            "iconCode": [{ "_": "33", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "10", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "20", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "10", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "S", "$": { "windDirFull": "South" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405261000" },
+            "condition": ["Periods of rain"],
+            "iconCode": [{ "_": "12", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "10", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "30", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "10", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "S", "$": { "windDirFull": "South" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405261100" },
+            "condition": ["Periods of rain"],
+            "iconCode": [{ "_": "12", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "9", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "30", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "10", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "S", "$": { "windDirFull": "South" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405261200" },
+            "condition": ["Periods of rain"],
+            "iconCode": [{ "_": "12", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "9", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "30", "$": { "category": "Low", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "10", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "S", "$": { "windDirFull": "South" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405261300" },
+            "condition": ["Periods of rain"],
+            "iconCode": [{ "_": "12", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "9", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "100", "$": { "category": "High", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "10", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "S", "$": { "windDirFull": "South" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405261400" },
+            "condition": ["Periods of rain"],
+            "iconCode": [{ "_": "12", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "10", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "100", "$": { "category": "High", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "10", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [{ "_": "S", "$": { "windDirFull": "South" } }],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405261500" },
+            "condition": ["Periods of rain"],
+            "iconCode": [{ "_": "12", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "10", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "100", "$": { "category": "High", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "15", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "SE", "$": { "windDirFull": "Southeast" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ]
+          },
+          {
+            "$": { "dateTimeUTC": "202405261600" },
+            "condition": ["Periods of rain"],
+            "iconCode": [{ "_": "12", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "10", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "100", "$": { "category": "High", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "15", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "SE", "$": { "windDirFull": "Southeast" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ],
+            "uv": [{ "index": ["1"] }]
+          },
+          {
+            "$": { "dateTimeUTC": "202405261700" },
+            "condition": ["Periods of rain"],
+            "iconCode": [{ "_": "12", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "11", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "100", "$": { "category": "High", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "15", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "SE", "$": { "windDirFull": "Southeast" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ],
+            "uv": [{ "index": ["1"] }]
+          },
+          {
+            "$": { "dateTimeUTC": "202405261800" },
+            "condition": ["Periods of rain"],
+            "iconCode": [{ "_": "12", "$": { "format": "png" } }],
+            "temperature": [
+              { "_": "11", "$": { "unitType": "metric", "units": "C" } }
+            ],
+            "lop": [{ "_": "100", "$": { "category": "High", "units": "%" } }],
+            "windChill": [{ "$": { "unitType": "metric" } }],
+            "humidex": [{ "$": { "unitType": "metric" } }],
+            "wind": [
+              {
+                "speed": [
+                  { "_": "20", "$": { "unitType": "metric", "units": "km/h" } }
+                ],
+                "direction": [
+                  { "_": "SE", "$": { "windDirFull": "Southeast" } }
+                ],
+                "gust": [{ "$": { "unitType": "metric", "units": "km/h" } }]
+              }
+            ],
+            "uv": [{ "index": ["1"] }]
+          }
+        ]
+      }
+    ],
+    "yesterdayConditions": [
+      {
+        "temperature": [
+          {
+            "_": "13.2",
+            "$": { "unitType": "metric", "units": "C", "class": "high" }
+          },
+          {
+            "_": "10.3",
+            "$": { "unitType": "metric", "units": "C", "class": "low" }
+          }
+        ],
+        "precip": [{ "_": "3.8", "$": { "unitType": "metric", "units": "mm" } }]
+      }
+    ],
+    "riseSet": [
+      {
+        "disclaimer": [
+          "The information provided here, for the times of the rise and set of the sun, is an estimate included as a convenience to our clients. Values shown here may differ from the official sunrise/sunset data available from (http://hia-iha.nrc-cnrc.gc.ca/sunrise_e.html)"
+        ],
+        "dateTime": [
+          {
+            "$": { "name": "sunrise", "zone": "UTC", "UTCOffset": "0" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+            "hour": ["12"],
+            "minute": ["17"],
+            "timeStamp": ["20240525121700"],
+            "textSummary": ["Saturday May 25, 2024 at 12:17 UTC"]
+          },
+          {
+            "$": { "name": "sunrise", "zone": "PDT", "UTCOffset": "-7" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+            "hour": ["05"],
+            "minute": ["17"],
+            "timeStamp": ["20240525051700"],
+            "textSummary": ["Saturday May 25, 2024 at 05:17 PDT"]
+          },
+          {
+            "$": { "name": "sunset", "zone": "UTC", "UTCOffset": "0" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "26", "$": { "name": "Sunday" } }],
+            "hour": ["04"],
+            "minute": ["03"],
+            "timeStamp": ["20240526040300"],
+            "textSummary": ["Sunday May 26, 2024 at 04:03 UTC"]
+          },
+          {
+            "$": { "name": "sunset", "zone": "PDT", "UTCOffset": "-7" },
+            "year": ["2024"],
+            "month": [{ "_": "05", "$": { "name": "May" } }],
+            "day": [{ "_": "25", "$": { "name": "Saturday" } }],
+            "hour": ["21"],
+            "minute": ["03"],
+            "timeStamp": ["20240525210300"],
+            "textSummary": ["Saturday May 25, 2024 at 21:03 PDT"]
+          }
+        ]
+      }
+    ],
+    "almanac": [
+      {
+        "temperature": [
+          {
+            "_": "26.1",
+            "$": {
+              "class": "extremeMax",
+              "period": "1937-2013",
+              "unitType": "metric",
+              "units": "C",
+              "year": "1947"
+            }
+          },
+          {
+            "_": "4.4",
+            "$": {
+              "class": "extremeMin",
+              "period": "1937-2013",
+              "unitType": "metric",
+              "units": "C",
+              "year": "1964"
+            }
+          },
+          {
+            "_": "17.4",
+            "$": { "class": "normalMax", "unitType": "metric", "units": "C" }
+          },
+          {
+            "_": "9.4",
+            "$": { "class": "normalMin", "unitType": "metric", "units": "C" }
+          },
+          {
+            "_": "13.4",
+            "$": { "class": "normalMean", "unitType": "metric", "units": "C" }
+          }
+        ],
+        "precipitation": [
+          {
+            "_": "15.4",
+            "$": {
+              "class": "extremeRainfall",
+              "period": "1937-2013",
+              "unitType": "metric",
+              "units": "mm",
+              "year": "1998"
+            }
+          },
+          {
+            "_": "0.0",
+            "$": {
+              "class": "extremeSnowfall",
+              "period": "1937-2013",
+              "unitType": "metric",
+              "units": "cm",
+              "year": "1937"
+            }
+          },
+          {
+            "_": "15.4",
+            "$": {
+              "class": "extremePrecipitation",
+              "period": "1937-2013",
+              "unitType": "metric",
+              "units": "mm",
+              "year": "1998"
+            }
+          },
+          {
+            "_": "0.0",
+            "$": {
+              "class": "extremeSnowOnGround",
+              "period": "1955-2013",
+              "unitType": "metric",
+              "units": "cm",
+              "year": "1955"
+            }
+          }
+        ],
+        "pop": [{ "_": "42.0", "$": { "units": "%" } }]
+      }
+    ]
+  }
+}
