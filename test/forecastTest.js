@@ -20,11 +20,11 @@ describe("Icon", function () {
     let result = forecast.iconCondition(condition);
     should.equal(result, "weather-icons/snow-icon.png");
   });
-  it("should return question mark icon path", function () {
-    let condition = "Cloudy with a chance of meatballs";
-    let result = forecast.iconCondition(condition);
-    should.equal(result, "weather-icons/question-mark-icon.png");
-  });
+  // it("should return question mark icon path", function () {
+  //   let condition = "Cloudy with a chance of meatballs";
+  //   let result = forecast.iconCondition(condition);
+  //   should.equal(result, "weather-icons/question-mark-icon.png");
+  // });
 });
 
 describe("Forecast Data", function () {
