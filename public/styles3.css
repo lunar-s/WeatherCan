@@ -34,6 +34,13 @@ html {
   width: auto;
 }
 
+h1 {
+  padding-top: 150px;
+  font-family: "Lemon Tuesday", cursive;
+  text-align: center;
+  color: azure;
+}
+
 .leftside {
   width: 65%;
   height: auto;
@@ -98,6 +105,14 @@ hr {
   justify-content: space-evenly;
   color: white;
   flex-direction: column;
+}
+
+.alert {
+  background-color: red;
+  color: white;
+  text-align: center;
+  border-radius: 0;
+  border: 3px solid gray;
 }
 
 #tonight-conditions {

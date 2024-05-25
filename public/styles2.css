@@ -20,6 +20,14 @@
   }
 }
 
+h1 {
+  padding-top: 150px;
+  font-family: "Lemon Tuesday", cursive;
+  text-align: center;
+  color: azure;
+  font-size: 3rem;
+}
+
 form {
   display: flex;
   flex-direction: column;
