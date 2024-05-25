@@ -34,13 +34,6 @@ html {
   width: auto;
 }
 
-h1 {
-  padding-top: 150px;
-  font-family: "Lemon Tuesday", cursive;
-  text-align: center;
-  color: azure;
-}
-
 .leftside {
   width: 65%;
   height: auto;
@@ -50,16 +43,6 @@ h1 {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-}
-
-.rightside {
-  width: 55%;
-  height: 90%;
-  background-color: rgba(70, 151, 221, 0.666);
-  margin: 20px;
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
 }
 
 hr {
@@ -115,21 +98,6 @@ hr {
   justify-content: space-evenly;
   color: white;
   flex-direction: column;
-}
-
-.alert {
-  background-color: red;
-  color: white;
-  text-align: center;
-  border-radius: 0;
-  border: 3px solid gray;
-}
-
-.icons {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  color: white;
 }
 
 #tonight-conditions {
@@ -196,11 +164,6 @@ div.form-check.form-switch {
   margin-top: 55px;
 }
 
-.cityList {
-  display: flex;
-  flex-direction: column;
-}
-
 #nav-browse {
   display: flex;
   flex-direction: column;
@@ -230,12 +193,6 @@ div.form-check.form-switch {
 
 .province {
   text-align: center;
-}
-
-.provinceNav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 
 #topButtonContainer {
