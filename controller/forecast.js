@@ -2,7 +2,6 @@ const date = require('date-and-time');
 const weatherConditions = require("./conditions");
 
 const iconCondition = (condition) => {
-  console.log(condition)
   for(let weatherType in weatherConditions){
     const conditionsArray = weatherConditions[weatherType];
     for(let i = 0; i < conditionsArray.length; i++){
