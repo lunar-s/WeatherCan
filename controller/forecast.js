@@ -21,8 +21,8 @@ const iconCondition = (condition) => {
 
 
 const forecastData = (result) => {
-  let dataHour = date.format(date.parse(result.siteData.dateTime[1].hour[0], "HH", true), "H", true)
-  if (dataHour < 12) {
+  let dataDay = result.siteData.forecastGroup[0].forecast[1].period[0]["_"]
+  if (dataDay.includes("night")) {
     return {
       temperature: result.siteData.currentConditions[0].temperature[0]["_"],
       currentConditions: result.siteData.currentConditions[0].condition,
