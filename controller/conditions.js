@@ -18,6 +18,7 @@ const weatherConditions = {
     "cloudy periods",
     "mainly cloudy",
     "overcast",
+    "increasing cloudiness"
   ],
   thunder: ["thunder", "thunderstorm", "thundershowers"],
   snow: [
