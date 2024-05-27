@@ -18,14 +18,24 @@ const iconCondition = (condition) => {
 };
 
 
-
+const currentForecastData = (result) => {
+  if (result.siteData.currentConditions != "") {
+    return {
+      temperature: result.siteData.currentConditions[0].temperature[0]["_"]+"°C",
+      currentConditions: result.siteData.currentConditions[0].condition,
+    }
+  } else {
+    return {
+      temperature: "Not Observed",
+      currentConditions: "Not Observed"
+    }
+  }
+}
 
 const forecastData = (result) => {
   let dataDay = result.siteData.forecastGroup[0].forecast[1].period[0]["_"]
   if (dataDay.includes("night")) {
     return {
-      temperature: result.siteData.currentConditions[0].temperature[0]["_"],
-      currentConditions: result.siteData.currentConditions[0].condition,
       dateTime: `${date.format(date.parse(result.siteData.dateTime[1].hour[0], "HH", true), "hA", true)} ${result.siteData.dateTime[1]["$"].zone} 
       ${result.siteData.dateTime[1].day[0]["$"].name} 
       ${parseInt(result.siteData.dateTime[1].day[0]["_"])} 
@@ -222,8 +232,6 @@ const forecastData = (result) => {
           .textSummary[0],
     };
   } else return {
-    temperature: result.siteData.currentConditions[0].temperature[0]["_"],
-    currentConditions: result.siteData.currentConditions[0].condition,
     dateTime: `${date.format(date.parse(result.siteData.dateTime[1].hour[0], "HH", true), "hA", true)} ${result.siteData.dateTime[1]["$"].zone} 
     ${result.siteData.dateTime[1].day[0]["$"].name} 
     ${parseInt(result.siteData.dateTime[1].day[0]["_"])} 
@@ -442,4 +450,4 @@ const forecastData = (result) => {
 // console.log("Night: " + forecast.overmorrowNightConditions);
 // console.log("Night: " + forecast.overmorrowNightCondition);
 
-module.exports = { forecastData, iconCondition };
+module.exports = { forecastData, iconCondition, currentForecastData };

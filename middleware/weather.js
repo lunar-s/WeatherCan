@@ -1,7 +1,7 @@
 const https = require("https");
 const cityFinder = require("../controller/cityFinder");
 const parseString = require("xml2js").parseString;
-const { forecastData, iconCondition } = require("../controller/forecast");
+const { forecastData, iconCondition, currentForecastData } = require("../controller/forecast");
 
 const temperatureExtract = (req, res) => {
   let cityToFind = req.query.city
@@ -32,13 +32,14 @@ const temperatureExtract = (req, res) => {
     // UNCOMMENT LINE BELOW FOR TESTING
     // const result = require("../controller/test_data.json");
     const forecast = forecastData(result);
+    const currentForecast = currentForecastData(result);
 
           res.render("city", {
             city: cityName,
             province: province,
-            temperature: `${forecast.temperature}°C`,
+            temperature: `${currentForecast.temperature}`,
             currentConditions: forecast.currentConditions,
-            iconCondition: iconCondition(forecast.currentConditions[0]),
+            iconCondition: iconCondition(currentForecast.currentConditions[0]),
             dateTime: forecast.dateTime,
             tonightConditions: forecast.tonightConditions,
             tonightSummary: forecast.tonightSummary,
