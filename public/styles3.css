@@ -52,16 +52,6 @@ h1 {
   border-radius: 10px;
 }
 
-.rightside {
-  width: 55%;
-  height: 90%;
-  background-color: rgba(70, 151, 221, 0.666);
-  margin: 20px;
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
-}
-
 hr {
   height: 10px;
   width: 90%;
@@ -123,13 +113,6 @@ hr {
   text-align: center;
   border-radius: 0;
   border: 3px solid gray;
-}
-
-.icons {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  color: white;
 }
 
 #tonight-conditions {
@@ -196,11 +179,6 @@ div.form-check.form-switch {
   margin-top: 55px;
 }
 
-.cityList {
-  display: flex;
-  flex-direction: column;
-}
-
 #nav-browse {
   display: flex;
   flex-direction: column;
@@ -230,12 +208,6 @@ div.form-check.form-switch {
 
 .province {
   text-align: center;
-}
-
-.provinceNav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 
 #topButtonContainer {
