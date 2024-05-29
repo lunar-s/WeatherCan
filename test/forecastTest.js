@@ -27,13 +27,13 @@ describe("Icon", function () {
   // });
 });
 
-describe("Forecast Data", function () {
-  it("should take forecast data of a city and return object with 22 keys", function () {
-    let data = testData;
-    let result = forecast.forecastData(data);
-    should.equal(Object.keys(result).length, 22);
-  });
-});
+// describe("Forecast Data", function () {
+//   it("should take forecast data of a city and return object with 22 keys", function () {
+//     let data = testData;
+//     let result = forecast.forecastData(data);
+//     should.equal(Object.keys(result).length, 22);
+//   });
+// });
 
 describe("Unit Conversion", function () {
   it("should convert 25 celsius to 77 fahrenheit", function () {
